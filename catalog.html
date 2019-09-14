@@ -14,16 +14,41 @@
                 <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Gllacy»">
             </a>
             <ul>
-                <li><a href="#">Каталог</a></li>
+                <li class="menu-catalog">
+                    <a href="#">Каталог</a>
+                    <h2 class="visually-hidden">Каталог</h2>
+                    <ul>
+                        <li><a href="#">Новинки</a></li>
+                        <li>Сливочное</li>
+                        <li><a href="#">Щербеты</a></li>
+                        <li><a href="#">Фруктовый лед</a></li>
+                        <li><a href="#">Мелорин</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Доставка и оплата</a></li>
                 <li><a href="#">О Компании</a></li>
             </ul>
         </nav>
-        <div>
+        <div class="search">
             <a href="#">поиск</a>
+            <h2 class="visually-hidden">Поиск товара</h2>
+            <form action="https://echo.gllacy.ru" method="get">
+                <label for="field-search" class="visually-hidden">Поле для поиска</label>
+                <input type="text" placeholder="Крем-брюле" name="search" id="field-search">
+            </form>
         </div>
         <div>
             <a href="#">Вход</a>
+            <h2 class="visually-hidden">Личный кабинет</h2>
+            <form action="https://echo.gllacy.ru" method="post">
+                <label for="login" class="visually-hidden">Ваш логин</label>
+                <input type="text" id="login" name="login" placeholder="email@example.com">
+                <label for="password" class="visually-hidden">Ваш пароль</label>
+                <input type="password" id="password" name="password" placeholder="••••••••">
+                <button type="submit" name="button-entrance">Войти</button>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+            </form>
         </div>
         <div>
             <a href="#">2 товара</a>
@@ -43,80 +68,59 @@
         <section class="filters">
             <h2 class="visually-hidden">Сортировка товаров</h2>
             <form action="https://echo.gllacy.ru" method="post">
-                <div>
-                    <span>Сортировка:</span>
+                <fieldset>
+                    <legend>Сортировка:</legend>
                     <select name="filter-sort" id="filter-sort">
-                        <option value="по популярности">по популярности</option>
+                        <option value="popularity">по популярности</option>
                     </select>
-                </div>
-                <div class="filter-price">
-                    <p>Цена: 100 руб. – 500 руб.</p>
-                </div>
-                <div>
-                    <span>Жирность:</span>
-                    <ul>
-                        <li>
-                            <label>
-                                <input type="radio" name="filter-fat" value="zero">
-                                0%
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="radio" name="filter-fat" value="before10" checked>
-                                до 10%
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="radio" name="filter-fat" value="before30" >
-                                до 30%
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="radio" name="filter-fat" value="after30">
-                                выше 30%
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <span>Наполнители:</span>
-                    <ul>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="chocolate" checked>
-                                шоколадные
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="sugar-powder" checked>
-                                сахарные присыпки
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="fruit">
-                                фрукты
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="syrup" >
-                                сиропы
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="jam" >
-                                джемы
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-                <input type="submit" value="Применить" name="button-filter">
+                </fieldset>
+                <fieldset class="filter-price">
+                    <legend>Цена:100 руб. – 500 руб.</legend>
+                    <div></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Жирность:</legend>
+                    <label>
+                        <input type="radio" name="filter-fat" value="zero"/>
+                        0%
+                    </label>
+                    <label>
+                        <input type="radio" name="filter-fat" value="before10" checked/>
+                        до 10%
+                    </label>
+                    <label>
+                        <input type="radio" name="filter-fat" value="before30" />
+                        до 30%
+                    </label>
+                    <label>
+                        <input type="radio" name="filter-fat" value="after30"/>
+                        выше 30%
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Наполнители:</legend>
+                    <label>
+                        <input type="checkbox" name="chocolate" checked />
+                        шоколадные
+                    </label>
+                    <label>
+                        <input type="checkbox" name="sugar-powder" checked />
+                        сахарные присыпки
+                    </label>
+                    <label>
+                        <input type="checkbox" name="fruit"/>
+                        фрукты
+                    </label>
+                    <label>
+                        <input type="checkbox" name="syrup" />
+                        сиропы
+                    </label>
+                    <label>
+                        <input type="checkbox" name="jam" />
+                        джемы
+                    </label>
+                </fieldset>
+                <button type="submit" name="button-filter">Применить</button>
             </form>
         </section>
         <section>
@@ -225,10 +229,10 @@
         <section>
             <h2 class="visually-hidden">Мы в социальных сетях</h2>
             <ul>
-                <li><a href="#" class="visually-hidden">Глейси в твиттере</a></li>
-                <li><a href="#" class="visually-hidden">Глейси в инстаграмм</a></li>
-                <li><a href="#" class="visually-hidden">Глейси в фейсбук</a></li>
-                <li><a href="#" class="visually-hidden">Глейси во в контакте</a></li>
+                <li><a href="#"><span class="visually-hidden">Глейси в твиттере</span></a></li>
+                <li><a href="#"><span class="visually-hidden">Глейси в инстаграмм</span></a></li>
+                <li><a href="#"><span class="visually-hidden">Глейси в фейсбук</span></a></li>
+                <li><a href="#"><span class="visually-hidden">Глейси во в контакте</span></a></li>
             </ul>
         </section>
         <section>
@@ -245,8 +249,7 @@
             <a href="https://htmlacademy.ru/intensive/htmlcss">
                 <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип академии html">
             </a>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
-            <span>Сделано в HTML Academy © 2019</span>
+            <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a> HTML Academy © 2019</span>
         </section>
     </footer>
 
@@ -267,26 +270,8 @@
             </li>
         </ul>
         <span>Итого:</span><span>750 руб.</span>
-        <form action="https://echo.gllacy.ru" method="post">
-            <input type="submit" name="order" value="Оформить заказ">
-        </form>
-    </section>
-
-    <section class="menu-catalog">
-        <h2 class="visually-hidden">Каталог</h2>
-        <ul>
-            <li><a href="#">Новинки</a></li>
-            <li>Сливочное</li>
-            <li><a href="#">Щербеты</a></li>
-            <li><a href="#">Фруктовый лед</a></li>
-            <li><a href="#">Мелорин</a></li>
-        </ul>
-    </section>
-
-    <section class="search">
-        <h2 class="visually-hidden">Поиск товара</h2>
-        <form action="https://echo.gllacy.ru" method="post">
-            <input type="text" placeholder="Крем-брюле" name="search">
+        <form action="https://echo.gllacy.ru" method="get">
+            <button type="submit" name="order">Оформить заказ</button>
         </form>
     </section>
 
