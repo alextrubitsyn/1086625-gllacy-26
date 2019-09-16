@@ -36,19 +36,13 @@ input:checked[value="offer-3"]~.offer-name--3 {
 }
 
 input:checked[value="offer-1"]~.bg::after {
-    background-color: #849d8f;
-    background-image: url("img/slider-photo-1.png");
-    background-repeat: no-repeat;
+    background: url("img/slider-photo-1.png") no-repeat #849d8f;
 }
 
 input:checked[value="offer-2"]~.bg::after {
-    background-color: #8996a6;
-    background-image: url("img/slider-photo-2.png");
-    background-repeat: no-repeat;
+    background: url("img/slider-photo-2.png") no-repeat #8996a6;
 }
 
 input:checked[value="offer-3"]~.bg::after {
-    background-color: #9d8b84;
-    background-image: url("img/slider-photo-3.png");
-    background-repeat: no-repeat;
+    background: url("img/slider-photo-3.png") no-repeat #9d8b84;
 }
