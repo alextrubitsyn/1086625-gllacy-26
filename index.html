@@ -14,7 +14,6 @@
             <ul>
                 <li class="menu-catalog">
                     <a href="catalog.html">Каталог</a>
-                    <h2 class="visually-hidden">Каталог</h2>
                     <ul>
                         <li><a href="#">Новинки</a></li>
                         <li><a href="catalog.html">Сливочное</a></li>
@@ -33,7 +32,7 @@
             <h2 class="visually-hidden">Поиск товара</h2>
             <form action="https://echo.gllacy.ru" method="get">
                 <label for="field-search" class="visually-hidden">Поле для поиска</label>
-                <input type="text" placeholder="Крем-брюле" name="search" id="field-search">
+                <input type="search" placeholder="Крем-брюле" name="search" id="field-search">
             </form>
         </div>
         <div>
@@ -60,9 +59,16 @@
         <h1 class="visually-hidden">Магазин Глейси</h1>
         <section>
             <h2 class="visually-hidden">Специальные предложения</h2>
-            <div>
-                <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-                <img src="img/slider-photo-1.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
+            <div class="best-offer">
+                <form action="https://echo.gllacy.ru" method="get">
+                    <input type="radio" name="best-offer" value="offer-1" checked/>
+                    <input type="radio" name="best-offer" value="offer-2" />
+                    <input type="radio" name="best-offer" value="offer-3" />
+                    <h3 class="ice-cream-offer offer-name--1">Крем-брюле и пломбир с малиновым джемом</h3>
+                    <h3 class="ice-cream-offer offer-name--2">Шоколадный пломбир и лимонный сорбет</h3>
+                    <h3 class="ice-cream-offer offer-name--3">Пломбир с помадкой и клубничный щербет</h3>
+                    <div class="bg"></div>
+                </form>
                 <a href="#">Давайте оба!</a>
             </div>
             <div>
@@ -155,8 +161,7 @@
             </form>
         </section>
         <section>
-            <h2>Местоположение магазина на карте</h2>
-            <!--Здесь будет карта-->
+            <h2 class="visually-hidden">Местоположение магазина на карте</h2>
             <div>
                 <p>Адрес главного офиса и офлайн-магазина:
                     <span> ул. Большая Конюшенная 

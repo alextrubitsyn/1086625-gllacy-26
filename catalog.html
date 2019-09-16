@@ -16,7 +16,6 @@
             <ul>
                 <li class="menu-catalog">
                     <a href="#">Каталог</a>
-                    <h2 class="visually-hidden">Каталог</h2>
                     <ul>
                         <li><a href="#">Новинки</a></li>
                         <li>Сливочное</li>
@@ -52,6 +51,28 @@
         </div>
         <div>
             <a href="#">2 товара</a>
+            <section class="shopping-cart">
+                <h2 class="visually-hidden">Содержание корзины</h2>
+                <ul>
+                    <li>
+                        <a href="#" class="visually-hidden">Удаление товара</a>
+                        <p>Пломбир с апельсиновым джемом</p>
+                        <p>1,5 кг х 200 руб.</p>
+                        <p>300 руб.</p>
+                    </li>
+                    <li>
+                        <a href="#" class="visually-hidden">Удаление товара</a>
+                        <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+                        <p>1,5 кг х 300 руб.</p>
+                        <p>450 руб.</p>
+                    </li>
+                </ul>
+                <span>Итого:</span><span>750 руб.</span>
+                <form action="https://echo.gllacy.ru" method="get">
+                    <button type="submit" name="order">Оформить заказ</button>
+                </form>
+            </section>
+
         </div>
         <p>С 10 до 20, ежедневно</p>
         <p>8 812 450-25-25</p>
@@ -60,10 +81,10 @@
 
     <main>
         <h1>Сливочное мороженое</h1>
-        <ul>
+        <ul class="breadcrumbs">
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
-            <li>Сливочное</li>
+            <li class="breadcrumbs-current">Сливочное</li>
         </ul>
         <section class="filters">
             <h2 class="visually-hidden">Сортировка товаров</h2>
@@ -76,7 +97,6 @@
                 </fieldset>
                 <fieldset class="filter-price">
                     <legend>Цена:100 руб. – 500 руб.</legend>
-                    <div></div>
                 </fieldset>
                 <fieldset>
                     <legend>Жирность:</legend>
@@ -223,6 +243,16 @@
                     <button type="button">Быстрый просмотр</button>
                 </li>
             </ul>
+            <ul class="pagination-list">
+                <li class="pagination-item pagination-item-current"><a>1</a></li>
+                <li class="pagination-item"><a href="#">2</a></li>
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a href="#">4</a></li>
+                <li class="pagination-item"><a href="#">5</a></li>
+                <li class="pagination-item pagination-item-more">
+                    <a href="#"></a>
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
@@ -253,27 +283,6 @@
         </section>
     </footer>
 
-    <section class="shopping-cart">
-        <h2 class="visually-hidden">Содержание корзины</h2>
-        <ul>
-            <li>
-                <a href="#" class="visually-hidden">Удаление товара</a>
-                <p>Пломбир с апельсиновым джемом</p>
-                <p>1,5 кг х 200 руб.</p>
-                <p>300 руб.</p>
-            </li>
-            <li>
-                <a href="#" class="visually-hidden">Удаление товара</a>
-                <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                <p>1,5 кг х 300 руб.</p>
-                <p>450 руб.</p>
-            </li>
-        </ul>
-        <span>Итого:</span><span>750 руб.</span>
-        <form action="https://echo.gllacy.ru" method="get">
-            <button type="submit" name="order">Оформить заказ</button>
-        </form>
-    </section>
 
 </body>
 
