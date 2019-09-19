@@ -170,7 +170,7 @@ a.button {
 .search-form input,
 .user-form input {
     vertical-align: middle;
-    color: #999999;
+    color: #323232;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -311,6 +311,13 @@ input:checked[value="offer-3"]~.bg::after {
     font-size: 32px;
     font-weight: 700;
     line-height: 44px;
+}
+
+.offer-kit-item h3 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60.35px;
+    text-align: center;
 }
 
 .offers-addition h3 {
@@ -476,7 +483,7 @@ input:checked[value="offer-3"]~.bg::after {
 .subscription input {
     width: 368px;
     height: 44px;
-    color: #999999;
+    color: #323232;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
