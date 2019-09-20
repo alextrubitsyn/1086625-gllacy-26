@@ -30,14 +30,14 @@
             </ul>
         </nav>
 
-        <a href="#" class="search">
-            <a href="#"></a>
+        <div class="search">
+            <a class="search-link" href="#"><span class="visually-hidden">Поиск товара</span></a>
             <h2 class="visually-hidden">Поиск товара</h2>
             <form class="search-form" action="https://echo.gllacy.ru" method="get">
                 <label for="field-search" class="visually-hidden">Поле для поиска</label>
                 <input type="search" placeholder="Крем-брюле" name="search" id="field-search">
             </form>
-        </a>
+        </div>
         <div class="user-account">
             <a href="#">Вход</a>
             <h2 class="visually-hidden">Личный кабинет</h2>
@@ -163,9 +163,9 @@
             </ul>
         </section>
         <article class="news">
-            <span>Новое в нашем блоге</span>
-            <a href="#">
-                <h2>10 способов сервировки фруктовых щербетов к столу</h2>
+            <p>Новое в нашем блоге</p>
+            <a class="news-link" href="#">
+                <h2 class="news-title">10 способов сервировки фруктовых щербетов к столу</h2>
             </a>
         </article>
         <section class="subscription">
@@ -194,11 +194,11 @@
     <footer class="main-footer">
         <section class="footer-social">
             <h2 class="visually-hidden">Мы в социальных сетях</h2>
-            <ul>
-                <li class="social social-twitter"><a href="#"><span class="visually-hidden">Глейси в твиттере</span></a></li>
-                <li class="social social-instagram"><a href="#"><span class="visually-hidden">Глейси в инстаграмм</span></a></li>
-                <li class="social social-facebook"><a href="#"><span class="visually-hidden">Глейси в фейсбук</span></a></li>
-                <li class="social social-vkontakte"><a href="#"><span class="visually-hidden">Глейси во в контакте</span></a></li>
+            <ul class="social-list">
+                <li class="social-item"><a class="social social-twitter" href="#"><span class="visually-hidden">Глейси в твиттере</span></a></li>
+                <li class="social-item"><a class="social social-instagram" href="#"><span class="visually-hidden">Глейси в инстаграмм</span></a></li>
+                <li class="social-item"><a class="social social-facebook" href="#"><span class="visually-hidden">Глейси в фейсбук</span></a></li>
+                <li class="social-item"><a class="social social-vkontakte" href="#"><span class="visually-hidden">Глейси во в контакте</span></a></li>
             </ul>
         </section>
         <section class="footer-documents">
@@ -233,7 +233,7 @@
 
             <textarea name="message-text" id="message-text" placeholder="В свободной форме" cols="40" rows="6">
             </textarea>
-            <button class="button-close" type="button"></button>
+            <button class="button-close" type="button" aria-label="Закрыть форму"></button>
             <button class="button" type="submit" name="button-message">Отправить</button>
 
         </form>
