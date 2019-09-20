@@ -101,7 +101,7 @@ a.button {
     background-color: #f7f6f3;
 }
 
-.menu-catalog a:active {
+.menu-catalog>a:active {
     width: 87px;
     height: 32px;
     color: #323232;
@@ -142,7 +142,7 @@ a.button {
     background-color: #f6b5a5;
 }
 
-.catalog-list li:first-child a {
+.catalog-list li:first-child catalog-item-link {
     font-weight: 700;
 }
 
