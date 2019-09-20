@@ -14,19 +14,35 @@
     <header class="main-header">
         <nav class="main-navigation">
             <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Gllacy»">
-            <ul class="site-navigation">
-                <li class="menu-catalog">
-                    <a href="catalog.html">Каталог</a>
-                    <ul class="catalog-list">
-                        <li><a href="#">Новинки</a></li>
-                        <li><a href="catalog.html">Сливочное</a></li>
-                        <li><a href="#">Щербеты</a></li>
-                        <li><a href="#">Фруктовый лед</a></li>
-                        <li><a href="#">Мелорин</a></li>
+            <ul class="navigation-menu">
+                <li class="navigation-menu-item">
+                    <a class="navigation-menu-link" href="catalog.html">
+                        Каталог
+                    </a>
+                    <ul class="navigation-submenu">
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="#">Новинки</a>
+                        </li>
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="catalog.html">Сливочное</a>
+                        </li>
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="#">Щербеты</a>
+                        </li>
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="#">Фруктовый лед</a>
+                        </li>
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="#">Мелорин</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#">Доставка и оплата</a></li>
-                <li><a href="#">О Компании</a></li>
+                <li class="navigation-menu-item">
+                    <a class="navigation-menu-link" href="#">Доставка и оплата</a>
+                </li>
+                <li class="navigation-menu-item">
+                    <a class="navigation-menu-link" href="#">О Компании</a>
+                </li>
             </ul>
         </nav>
 
@@ -39,19 +55,19 @@
             </form>
         </div>
         <div class="user-account">
-            <a href="#">Вход</a>
+            <a class="user-account-link" href="#">Вход</a>
             <h2 class="visually-hidden">Личный кабинет</h2>
             <form class="user-form" action="https://echo.gllacy.ru" method="post">
-                <label for="login" class="visually-hidden">Ваш логин</label>
-                <input type="text" id="login" name="login" placeholder="email@example.com">
-                <label for="password" class="visually-hidden">Ваш пароль</label>
-                <input type="password" id="password" name="password" placeholder="••••••••">
+                <label class="visually-hidden" for="login">Ваш логин</label>
+                <input class="user-login" type="text" id="login" name="login" placeholder="email@example.com">
+                <label class="visually-hidden" for="password">Ваш пароль</label>
+                <input class="user-password" type="password" id="password" name="password" placeholder="••••••••">
                 <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
                 <a class="account-forget" href="#">Забыли пароль?</a>
                 <a class="account-newuser" href="#">Новая регистрация</a>
             </form>
         </div>
-        <div class="shopping-cart shopping-cart-empty">
+        <div class="shopping-cart-empty">
             <a href="#">Пусто</a>
         </div>
         <p class="header-worktime">С 10 до 20, ежедневно</p>
@@ -106,8 +122,8 @@
 
         <section class="bestsellers">
             <h2 class="visually-hidden">Хиты продаж</h2>
-            <ul class="bestsellers-list goods-list">
-                <li class="bestsellers-items goods-items">
+            <ul class="goods-list">
+                <li class="goods-items">
                     <a class="goods-item-link" href="#">
                         <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                         <img src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -115,7 +131,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="bestsellers-items goods-items">
+                <li class="goods-items">
                     <a class="goods-item-link" href="#">
                         <h3>Сливочно-кофейное с кусочками шоколада</h3>
                         <img src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
@@ -123,7 +139,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="bestsellers-items goods-items">
+                <li class="goods-items">
                     <a class="goods-item-link" href="#">
                         <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
                         <img src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
@@ -131,7 +147,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="bestsellers-items goods-items">
+                <li class="goods-items">
                     <a class="goods-item-link" href="#">
                         <h3>Сливочное крем-брюле с карамельной подливкой</h3>
                         <img src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
@@ -172,9 +188,9 @@
             <section class="subscription">
                 <h2 class="visually-hidden">Форма подписки</h2>
                 <p>
-                    Подпишитесь на нашу сладкую рассылку и будуту всегда в курсе всего самого вкусного, что происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                    Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                 </p>
-                <form action="https://echo.gllacy.ru" method="post">
+                <form class="subscription-form" action="https://echo.gllacy.ru" method="post">
                     <label for="subscription-email" class="visually-hidden">Ваш e-mail</label>
                     <input type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com">
                     <button class="button" type="submit" name="subscription">Отправить</button>
@@ -197,20 +213,35 @@
         <section class="footer-social">
             <h2 class="visually-hidden">Мы в социальных сетях</h2>
             <ul class="social-list">
-                <li class="social-item"><a class="social social-twitter" href="#"><span class="visually-hidden">Глейси в твиттере</span></a></li>
-                <li class="social-item"><a class="social social-instagram" href="#"><span class="visually-hidden">Глейси в инстаграмм</span></a></li>
-                <li class="social-item"><a class="social social-facebook" href="#"><span class="visually-hidden">Глейси в фейсбук</span></a></li>
-                <li class="social-item"><a class="social social-vkontakte" href="#"><span class="visually-hidden">Глейси во в контакте</span></a></li>
+                <li class="social-item">
+                    <a class="social social-twitter" href="#">
+                        <span class="visually-hidden">Глейси в твиттере</span>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="social social-instagram" href="#">
+                        <span class="visually-hidden">Глейси в инстаграмм</span>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="social social-facebook" href="#">
+                        <span class="visually-hidden">Глейси в фейсбук</span>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="social social-vkontakte" href="#">
+                        <span class="visually-hidden">Глейси во в контакте</span>
+                    </a>
+                </li>
             </ul>
         </section>
         <section class="footer-documents">
             <h2 class="visually-hidden">Меню документации</h2>
-            <div class="footer-heart"></div>
             <ul class="documents-list">
-                <li><a href="#">Для поставщиков</a></li>
-                <li><a href="#">О производстве</a></li>
-                <li><a href="#">Наши документы</a></li>
-                <li><a href="#">Экологические стандарты</a></li>
+                <li class="documents-item"><a href="#">Для поставщиков</a></li>
+                <li class="documents-item"><a href="#">О производстве</a></li>
+                <li class="documents-item"><a href="#">Наши документы</a></li>
+                <li class="documents-item"><a href="#">Экологические стандарты</a></li>
             </ul>
         </section>
         <section class="footer-copyright">

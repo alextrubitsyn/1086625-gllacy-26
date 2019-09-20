@@ -15,19 +15,35 @@
             <a href="index.html">
                 <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина «Gllacy»">
             </a>
-            <ul class="site-navigation">
-                <li class="menu-catalog">
-                    <a href="catalog.html">Каталог</a>
-                    <ul class="catalog-list">
-                        <li><a href="#">Новинки</a></li>
-                        <li><a href="catalog.html">Сливочное</a></li>
-                        <li><a href="#">Щербеты</a></li>
-                        <li><a href="#">Фруктовый лед</a></li>
-                        <li><a href="#">Мелорин</a></li>
+            <ul class="navigation-menu">
+                <li class="navigation-menu-item">
+                    <a class="navigation-menu-link" href="catalog.html">
+                        Каталог
+                    </a>
+                    <ul class="navigation-submenu">
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="#">Новинки</a>
+                        </li>
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="catalog.html">Сливочное</a>
+                        </li>
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="#">Щербеты</a>
+                        </li>
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="#">Фруктовый лед</a>
+                        </li>
+                        <li class="navigation-submenu-item">
+                            <a class="navigation-submenu-link" href="#">Мелорин</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#">Доставка и оплата</a></li>
-                <li><a href="#">О Компании</a></li>
+                <li class="navigation-menu-item">
+                    <a class="navigation-menu-link" href="#">Доставка и оплата</a>
+                </li>
+                <li class="navigation-menu-item">
+                    <a class="navigation-menu-link" href="#">О Компании</a>
+                </li>
             </ul>
         </nav>
 
@@ -40,20 +56,20 @@
             </form>
         </div>
         <div class="user-account">
-            <a href="#">Вход</a>
+            <a class="user-account-link" href="#">Вход</a>
             <h2 class="visually-hidden">Личный кабинет</h2>
             <form class="user-form" action="https://echo.gllacy.ru" method="post">
-                <label for="login" class="visually-hidden">Ваш логин</label>
-                <input type="text" id="login" name="login" placeholder="email@example.com">
-                <label for="password" class="visually-hidden">Ваш пароль</label>
-                <input type="password" id="password" name="password" placeholder="••••••••">
+                <label class="visually-hidden" for="login">Ваш логин</label>
+                <input class="user-login" type="text" id="login" name="login" placeholder="email@example.com">
+                <label class="visually-hidden" for="password">Ваш пароль</label>
+                <input class="user-password" type="password" id="password" name="password" placeholder="••••••••">
                 <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
                 <a class="account-forget" href="#">Забыли пароль?</a>
                 <a class="account-newuser" href="#">Новая регистрация</a>
             </form>
         </div>
-        <div class="shopping-cart shopping-cart-empty">
-            <a href="#">2 товара</a>
+        <div class="shopping-cart">
+            <a class="shopping-cart-link" href="#">2 товара</a>
             <h2 class="visually-hidden">Содержание корзины</h2>
             <form action="https://echo.gllacy.ru" method="post">
                 <ul class="shopping-cart-list">
