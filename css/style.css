@@ -86,8 +86,8 @@ a.button {
     list-style: none;
 }
 
-.menu-catalog a:hover,
-.menu-catalog a:focus {
+.menu-catalog>a:hover,
+.menu-catalog>a:focus {
     width: 87px;
     height: 32px;
     color: #323232;
@@ -107,11 +107,10 @@ a.button {
     line-height: 18px;
     box-shadow: inset 0 2px 1px #696969;
     background-color: #ededed;
-    background-color: #f8f7f4;
 }
 
 .catalog-list {
-    sdisplay: none;
+    /*    display: none;*/
     width: 143px;
     height: 171px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -145,6 +144,7 @@ a.button {
 }
 
 .search {
+    display: block;
     width: 33px;
     height: 33px;
     border-radius: 16px;
@@ -160,7 +160,7 @@ a.button {
 }
 
 .search-form {
-    display: none;
+    sdisplay: none;
     width: 341px;
     height: 84px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -266,7 +266,6 @@ a.header-phone {
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
-    text-decoration: underline;
 }
 
 .bg::after {
@@ -361,6 +360,10 @@ input:checked[value="offer-3"]~.bg::after {
     list-style: none;
 }
 
+.goods-list .goods-item-link {
+    text-decoration: none;
+}
+
 .goods-list h3 {
     color: #ffffff;
     font-size: 16px;
@@ -369,9 +372,9 @@ input:checked[value="offer-3"]~.bg::after {
     text-decoration: underline;
 }
 
-.goods-list a:hover h3,
-.goods-list a:focus h3,
-.goods-list a:active h3 {
+.goods-item-link:hover h3,
+.goods-item-link:focus h3,
+.goods-item-link:active h3 {
     color: #ffbc9e;
 }
 
@@ -436,6 +439,7 @@ input:checked[value="offer-3"]~.bg::after {
     border-radius: 10px;
 }
 
+.news,
 .news a {
     color: #323232;
 }
@@ -504,7 +508,7 @@ input:checked[value="offer-3"]~.bg::after {
     width: 1250px;
     height: 640px;
     background-image: url("../img/map.png");
-    sbackground-position: center center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
