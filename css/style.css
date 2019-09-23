@@ -14,14 +14,13 @@ body {
     font-family: "Roboto", "Arial", sans-serif;
     color: #ffffff;
     background-color: #849d8f;
-    outline: 1px solid red;
 }
 
 .container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 27px;
     /*временно*/
     outline: 1px solid black;
 }
@@ -85,13 +84,7 @@ a.button {
 
 /* Сетка header начало */
 
-.main-header {
-    display: flex;
-    flex-direction: column;
-}
-
 .header-firstline {
-    margin-left: 27px;
     padding-top: 9px;
     display: flex;
     justify-content: flex-start;
@@ -130,7 +123,6 @@ a.button {
     align-items: center;
     margin-top: 0;
     margin-left: auto;
-    margin-right: 27px;
 }
 
 .shopping-cart,
@@ -142,8 +134,6 @@ a.button {
 /* Сетка поиск конец*/
 
 .header-worktime {
-    align-self: flex-end;
-    padding-right: 27px;
     text-align: right;
     color: #ffffff;
     font-size: 14px;
@@ -427,38 +417,48 @@ input:checked[value="offer-3"]~.bg::after {
     line-height: 44px;
 }
 
-.offer-kit-item h3 {
+.offer-kit-title {
     font-size: 60px;
     font-weight: 700;
     line-height: 60.35px;
     text-align: center;
 }
 
-.offers-addition h3 {
+.offers-addition {
+    display: flex;
+    justify-content: space-between;
+}
+
+.offers-addition .addition-title {
     font-size: 35px;
     font-weight: 700;
     line-height: 41px;
 }
 
-.offers-addition p {
+.offers-addition .addition-content {
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
 }
 
-.offers-addition div {
-    width: 787px;
-    height: 410px;
-    border-radius: 10px;
+.offers-addition .addition-item {
+    width: 560px;
+    min-height: 230px;
+    border-radius: 20px;
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.offers-addition a {
+.offers-addition .button-addition {
+    margin-left: auto;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    */ padding: 14px 22px;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+    border-radius: 25px;
 }
 
 .addition-raspberry {
@@ -471,7 +471,7 @@ input:checked[value="offer-3"]~.bg::after {
     background-image: url("../img/bg-banner-chocolate.png");
 }
 
-.filter-category select {
+123456 .filter-category select {
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
@@ -499,9 +499,9 @@ input:checked[value="offer-3"]~.bg::after {
 
 /*  Сетка товары каталог начало*/
 
-.catalog .goods-list {
+.goods-list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 0;
     list-style: none;
@@ -511,13 +511,17 @@ input:checked[value="offer-3"]~.bg::after {
     width: 267px;
 }
 
+.goods-list .goods-photo {
+    display: block;
+    margin: 0 auto;
+}
+
 
 /*  Сетка товары каталог конец*/
 
 .catalog-title {
     margin: 0;
     padding-top: 5px;
-    padding-left: 27px;
 }
 
 .goods-list .goods-item-link {
@@ -560,7 +564,6 @@ input:checked[value="offer-3"]~.bg::after {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
-    width: 1146px;
     min-height: 306px;
     color: #323232;
     background-color: #ede2ca;
@@ -619,7 +622,7 @@ input:checked[value="offer-3"]~.bg::after {
 
 .index-columns {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .news {
@@ -707,7 +710,7 @@ input:checked[value="offer-3"]~.bg::after {
 }
 
 .map {
-    /*    width: 1200px;*/
+    width: 1250px;
     min-height: 640px;
     margin-left: auto;
     margin-right: auto;
@@ -766,12 +769,13 @@ input:checked[value="offer-3"]~.bg::after {
 .main-footer {
     padding: 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .social-list {
     padding: 0;
-    margin-left: 28px;
+    margin-left: 27px;
     display: flex;
     justify-content: space-between;
 }
@@ -782,7 +786,6 @@ input:checked[value="offer-3"]~.bg::after {
 
 .footer-documents {
     width: 330px;
-    margin-left: 230px;
     padding: 0;
 }
 
@@ -801,7 +804,6 @@ input:checked[value="offer-3"]~.bg::after {
 }
 
 .footer-copyright {
-    margin-left: auto;
     margin-right: 27px;
 }
 
@@ -894,7 +896,7 @@ input:checked[value="offer-3"]~.bg::after {
     list-style: none;
 }
 
-.breadcrumbs a {
+.breadcrumbs .breadcrumbs-link {
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
@@ -902,9 +904,9 @@ input:checked[value="offer-3"]~.bg::after {
     text-decoration: underline
 }
 
-.breadcrumbs a:hover,
-.breadcrumbs a:focus,
-.breadcrumbs a:active {
+.breadcrumbs .breadcrumbs-link:hover,
+.breadcrumbs .breadcrumbs-link:focus,
+.breadcrumbs .breadcrumbs-link:active {
     color: #ffbc9e;
 }
 
@@ -923,9 +925,9 @@ input:checked[value="offer-3"]~.bg::after {
     list-style: none;
 }
 
-.pagination-item a {
+.pagination-link {
     display: block;
-    width: 27px;
+    width: 26px;
     height: 26px;
     color: #ffffff;
     font-size: 16px;
@@ -935,18 +937,18 @@ input:checked[value="offer-3"]~.bg::after {
     border-radius: 50%;
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus {
+.pagination-link:hover,
+.pagination-link:focus {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.pagination-item-current a {
+.pagination-item-current .pagination-link {
     color: #323232;
     background-color: #ffffff;
 }
 
-.pagination-item-current a:hover,
-.pagination-item-current a:focus {
+.pagination-item-current .pagination-link:hover,
+.pagination-item-current .pagination-link:focus {
     background-color: #ffffff;
     opacity: 1;
 }
