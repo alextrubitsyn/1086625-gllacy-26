@@ -454,7 +454,7 @@ input:checked[value="offer-3"]~.bg::after {
     margin-left: auto;
     margin-right: 25px;
     margin-bottom: 20px;
-    */ padding: 14px 22px;
+    padding: 14px 22px;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -471,7 +471,7 @@ input:checked[value="offer-3"]~.bg::after {
     background-image: url("../img/bg-banner-chocolate.png");
 }
 
-123456 .filter-category select {
+.filter-category select {
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
