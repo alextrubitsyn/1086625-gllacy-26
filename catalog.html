@@ -21,23 +21,25 @@
                         <a class="navigation-menu-link" href="catalog.html">
                         Каталог
                     </a>
-                        <ul class="navigation-submenu">
-                            <li class="navigation-submenu-item">
-                                <a class="navigation-submenu-link" href="#">Новинки</a>
-                            </li>
-                            <li class="navigation-submenu-item navigation-submenu-active">
-                                <a class="navigation-submenu-link" href="catalog.html">Сливочное</a>
-                            </li>
-                            <li class="navigation-submenu-item">
-                                <a class="navigation-submenu-link" href="#">Щербеты</a>
-                            </li>
-                            <li class="navigation-submenu-item">
-                                <a class="navigation-submenu-link" href="#">Фруктовый лед</a>
-                            </li>
-                            <li class="navigation-submenu-item">
-                                <a class="navigation-submenu-link" href="#">Мелорин</a>
-                            </li>
-                        </ul>
+                        <div class="navigation-submenu-container">
+                            <ul class="navigation-submenu">
+                                <li class="navigation-submenu-item">
+                                    <a class="navigation-submenu-link" href="#">Новинки</a>
+                                </li>
+                                <li class="navigation-submenu-item navigation-submenu-active">
+                                    <a class="navigation-submenu-link" href="catalog.html">Сливочное</a>
+                                </li>
+                                <li class="navigation-submenu-item">
+                                    <a class="navigation-submenu-link" href="#">Щербеты</a>
+                                </li>
+                                <li class="navigation-submenu-item">
+                                    <a class="navigation-submenu-link" href="#">Фруктовый лед</a>
+                                </li>
+                                <li class="navigation-submenu-item">
+                                    <a class="navigation-submenu-link" href="#">Мелорин</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="navigation-menu-item">
                         <a class="navigation-menu-link" href="#">Доставка и оплата</a>
@@ -48,7 +50,6 @@
                 </ul>
             </nav>
             <div class="header-container">
-
                 <div class="search">
                     <a class="search-link" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
@@ -57,10 +58,12 @@
                         <span class="visually-hidden">Поиск товара</span>
                     </a>
                     <h2 class="visually-hidden">Поиск товара</h2>
-                    <form class="search-form" action="https://echo.gllacy.ru" method="get">
-                        <label class="visually-hidden" for="field-search">Поле для поиска</label>
-                        <input type="search" placeholder="Крем-брюле" name="search" id="field-search">
-                    </form>
+                    <div class="search-form-container">
+                        <form class="search-form" action="https://echo.gllacy.ru" method="get">
+                            <label class="visually-hidden" for="field-search">Поле для поиска</label>
+                            <input type="search" placeholder="Крем-брюле" name="search" id="field-search">
+                        </form>
+                    </div>
                 </div>
                 <div class="user-account">
                     <a class="user-account-link" href="#">
@@ -73,41 +76,51 @@
                         <span>Вход</span>
                     </a>
                     <h2 class="visually-hidden">Личный кабинет</h2>
-                    <form class="user-form" action="https://echo.gllacy.ru" method="post">
-                        <label class="visually-hidden" for="login">Ваш логин</label>
-                        <input class="user-login" type="text" id="login" name="login" placeholder="email@example.com">
-                        <label class="visually-hidden" for="password">Ваш пароль</label>
-                        <input class="user-password" type="password" id="password" name="password" placeholder="••••••••">
-                        <div class="user-form-click">
-                            <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
-                            <div class="user-form-link">
-                                <a class="account-link account-forget" href="#">Забыли пароль?</a>
-                                <a class="account-link account-newuser" href="#">Новая регистрация</a>
+                    <div class="user-form-container">
+                        <form class="user-form" action="https://echo.gllacy.ru" method="post">
+                            <label class="visually-hidden" for="login">Ваш логин</label>
+                            <input class="user-login" type="text" id="login" name="login" placeholder="email@example.com">
+                            <label class="visually-hidden" for="password">Ваш пароль</label>
+                            <input class="user-password" type="password" id="password" name="password" placeholder="••••••••">
+                            <div class="user-form-click">
+                                <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
+                                <div class="user-form-link">
+                                    <a class="account-link account-forget" href="#">Забыли пароль?</a>
+                                    <a class="account-link account-newuser" href="#">Новая регистрация</a>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-                <div class="shopping-cart shopping-cart-content">
-                    <a class="shopping-cart-link" href="#">2 товара</a>
+                <div class="basket basket-content">
+                    <a class="basket-link" href="#">2 товара</a>
                     <h2 class="visually-hidden">Содержание корзины</h2>
-                    <form class="shopping-cart-form" action="https://echo.gllacy.ru" method="post">
-                        <ul class="shopping-cart-list">
-                            <li class="shopping-cart-item">
-                                <a class="visually-hidden" href="#">Удаление товара</a>
-                                <h3>Пломбир с апельсиновым джемом</h3>
-                                <span><b>1,5 кг х </b>200 руб.</span>
-                                <b>300 руб.</b>
-                            </li>
-                            <li class="shopping-cart-item">
-                                <a class="visually-hidden" href="#">Удаление товара</a>
-                                <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
-                                <span><b>1,5 кг х </b>300 руб.</span>
-                                <b>450 руб.</b>
-                            </li>
-                        </ul>
-                        <span class="shopping-cart-total">Итого:750 руб.</span>
-                        <a class="button" href="#">Оформить заказ</a>
-                    </form>
+                    <div class="basket-form-container">
+                        <form class="basket-form" action="https://echo.gllacy.ru" method="post">
+                            <ul class="basket-list">
+                                <li class="basket-item">
+                                    <a class="button-item-delete" href="#">
+                                        <span class="visually-hidden">Удаление товара</span>
+                                    </a>
+                                    <img class="basket-photo" src="img/basket-photo1.png" width="33" height="33" alt="Фото товара">
+                                    <h3 class="basket-item-title">Пломбир с апельсиновым джемом</h3>
+                                    <div class="basket-item-count"><span>1,5 кг х </span>200 руб.</div>
+                                    <span class="basket-item-total">300 руб.</span>
+                                </li>
+                                <li class="basket-item">
+                                    <a class="button-item-delete" href="#">
+                                        <span class="visually-hidden">Удаление товара</span>
+                                    </a>
+                                    <img class="basket-photo" src="img/basket-photo2.png" width="33" height="33" alt="Фото товара">
+                                    <h3 class="basket-item-title">Клубничный пломбир с присыпкой из белого шоколада</h3>
+                                    <div class="basket-item-count"><span>1,5 кг х </span>300 руб.</div>
+                                    <span class="basket-item-total">450 руб.</span>
+                                </li>
+                            </ul>
+                            <span class="basket-total">Итого: 750 руб.</span>
+                            <a class="button button-basket" href="#">Оформить заказ</a>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,71 +139,67 @@
         </ul>
         <section class="filters">
             <h2 class="visually-hidden">Сортировка товаров</h2>
-            <form action="https://echo.gllacy.ru" method="post">
-                <div class="filters-line-1">
-                    <fieldset class="filter-category">
-                        <legend>Сортировка:</legend>
-                        <select name="filter-category" id="filter-category">
+            <form class="filters-form" action="https://echo.gllacy.ru" method="post">
+                <fieldset class="filter-category">
+                    <legend>Сортировка:</legend>
+                    <select name="filter-category" id="filter-category">
                         <option value="popularity" selected>по популярности</option>
                         <option value="before-chip">сначала недорогие</option>
                         <option value="before-expensive">сначала дорогие</option>
                         <option value="by-fat">по жирности</option>
                     </select>
-                    </fieldset>
-                    <fieldset class="filter-price">
-                        <legend>Цена:100 руб. – 500 руб.</legend>
-                        <span class="filter-price-container"></span>
-                    </fieldset>
-                    <fieldset class="filter-fat">
-                        <legend>Жирность:</legend>
-                        <div class="filter-fat-list">
-                            <label class="filter-fat-item">
+                </fieldset>
+                <fieldset class="filter-price">
+                    <legend>Цена:100 руб. – 500 руб.</legend>
+                    <span class="filter-price-container"></span>
+                </fieldset>
+                <fieldset class="filter-fat">
+                    <legend>Жирность:</legend>
+                    <div class="filter-fat-list">
+                        <label class="filter-fat-item">
                             <input class="visually-hidden" type="radio" name="filter-fat" value="zero">
                             0%
                         </label>
-                            <label class="filter-fat-item">
+                        <label class="filter-fat-item">
                             <input class="visually-hidden" type="radio" name="filter-fat" value="before10" checked>
                             до 10%
                         </label>
-                            <label class="filter-fat-item">
+                        <label class="filter-fat-item">
                             <input class="visually-hidden" type="radio" name="filter-fat" value="before30" >
                             до 30%
                         </label>
-                            <label class="filter-fat-item">
+                        <label class="filter-fat-item">
                             <input class="visually-hidden" type="radio" name="filter-fat" value="after30">
                             выше 30%
                         </label>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="filters-line-2">
-                    <fieldset class="filter-filler">
-                        <legend>Наполнители:</legend>
-                        <div class="filter-filler-list">
-                            <label class="filter-filler-item">
+                    </div>
+                </fieldset>
+                <fieldset class="filter-filler">
+                    <legend>Наполнители:</legend>
+                    <div class="filter-filler-list">
+                        <label class="filter-filler-item">
                                 <input class="visually-hidden" type="checkbox" name="chocolate" checked >
                                 шоколадные
                             </label>
-                            <label class="filter-filler-item">
+                        <label class="filter-filler-item">
                                 <input class="visually-hidden" type="checkbox" name="sugar-powder" checked >
                                 сахарные присыпки
                             </label>
-                            <label class="filter-filler-item">
+                        <label class="filter-filler-item">
                                 <input class="visually-hidden" type="checkbox" name="fruit">
                                 фрукты
                             </label>
-                            <label class="filter-filler-item">
+                        <label class="filter-filler-item">
                                 <input class="visually-hidden" type="checkbox" name="syrup">
                                 сиропы
                             </label>
-                            <label class="filter-filler-item">
+                        <label class="filter-filler-item">
                                 <input class="visually-hidden" type="checkbox" name="jam" >
                                 джемы
                             </label>
-                        </div>
-                    </fieldset>
-                    <button class="button-filter" type="submit" name="button-filter">Применить</button>
-                </div>
+                    </div>
+                </fieldset>
+                <button class="button-filter" type="submit" name="button-filter">Применить</button>
             </form>
         </section>
         <section class="catalog">

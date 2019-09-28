@@ -162,7 +162,7 @@ input[type="radio"].visually-hidden {
     margin-left: auto;
 }
 
-.shopping-cart,
+.basket,
 .user-account {
     margin-left: 10px;
 }
@@ -186,7 +186,7 @@ input[type="radio"].visually-hidden {
 /* Сетка header конец */
 
 .navigation-menu .navigation-menu-link {
-    padding: 10px 14px;
+    padding: 7px 14px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
@@ -198,16 +198,12 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
-.navigation-menu {
+.navigation-menu>.navigation-menu-item {
     position: relative;
 }
 
-.navigation-menu-item:hover>.navigation-submenu {
-    display: block;
-}
-
-.navigation-menu-link:hover,
-.navigation-menu-link:focus {
+.navigation-menu-item:hover>.navigation-menu-link,
+.navigation-menu-item:focus>.navigation-menu-link {
     width: 87px;
     height: 32px;
     color: #323232;
@@ -218,7 +214,7 @@ input[type="radio"].visually-hidden {
     background-color: #f7f6f3;
 }
 
-.navigation-menu-link:active {
+.navigation-menu-item:active>.navigation-menu-link {
     width: 87px;
     height: 32px;
     color: #323232;
@@ -238,18 +234,31 @@ input[type="radio"].visually-hidden {
     border-radius: 16px;
 }
 
-.navigation-submenu {
+.navigation-submenu-container {
     position: absolute;
-    top: 37px;
+    top: 22px;
     left: -7px;
     display: none;
+    padding-top: 13px;
+    z-index: 20;
+}
+
+.navigation-submenu {
+    margin: 0;
+    padding: 0;
     border-radius: 5px;
     width: 143px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
 }
 
+.navigation-menu>.navigation-menu-item:hover .navigation-submenu-container,
+.navigation-menu>.navigation-menu-item:focus .navigation-submenu-container {
+    display: block;
+}
+
 .navigation-submenu-link {
+    display: block;
     color: #323232;
     font-size: 14px;
     font-weight: 400;
@@ -267,12 +276,15 @@ input[type="radio"].visually-hidden {
     background-color: #f6b5a5;
 }
 
+.navigation-submenu-link {
+    padding: 10px 20px;
+}
+
 .navigation-submenu-item:first-child .navigation-submenu-link {
     font-weight: 700;
     background-image: url("../img/share.png");
     background-repeat: no-repeat;
     background-position: center bottom;
-    /* border-bottom: 1px solid #d1d0ce; */
 }
 
 .navigation-submenu-active .navigation-submenu-link,
@@ -287,36 +299,49 @@ input[type="radio"].visually-hidden {
     position: relative;
 }
 
-.search-link {
+
+/* outline: 3px solid red; */
+
+.search-link,
+.search:not(:active) .search-link {
+    width: 33px;
+    height: 33px;
+    padding: 10px 8px 4px;
     border-radius: 50%;
-    padding: 8px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.search-link:focus,
-.search-link:hover {
+.search:focus .search-link,
+.search:hover .search-link {
     background-color: #f8f7f4;
 }
 
-.search:focus .search-form,
-.search:hover .search-form {
-    display: block;
-}
-
-.search-link:focus path,
-.search-link:hover path {
-    fill: #000000;
+.search-form-container {
+    position: absolute;
+    top: 16px;
+    right: 0px;
+    padding-top: 15px;
+    display: none;
+    z-index: 20;
 }
 
 .search-form {
-    position: absolute;
-    top: 37px;
-    right: 0px;
-    display: none;
     padding: 20px 15px;
     border-radius: 5px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
+}
+
+.search:focus .search-form-container,
+.search:hover .search-form-container,
+.search:active .search-form-container {
+    display: block;
+}
+
+.search:focus .search-link path,
+.search:hover .search-link path,
+.search:active .search-link path {
+    fill: #000000;
 }
 
 .search-form input {
@@ -325,12 +350,12 @@ input[type="radio"].visually-hidden {
 
 .search-form input,
 .user-form input {
-    padding: 15px;
+    padding: 10px 15px;
     color: #323232;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    border-radius: 3px;
+    border-radius: 5px;
     border: 1px solid #d3d3d2;
     background-color: #ffffff;
 }
@@ -355,26 +380,35 @@ input[type="radio"].visually-hidden {
     padding: 3px 0 3px 7px;
 }
 
-.user-account-link:hover,
-.user-account-link:focus {
+.user-account:hover .user-account-link,
+.user-account:focus .user-account-link,
+.user-account:active .user-account-link {
     color: #323232;
     background-color: #f8f7f4;
 }
 
-.user-account-link:hover path,
-.user-account-link:focus path {
+.user-account:hover .user-account-link path,
+.user-account:focus .user-account-link path,
+.user-account:active .user-account-link path {
     fill: #000000;
 }
 
-.user-account:hover .user-form {
+.user-account:hover .user-form-container,
+.user-account:focus .user-form-container,
+.user-account:active .user-form-container {
     display: block;
 }
 
-.user-form {
+.user-form-container {
     position: absolute;
-    top: 37px;
+    top: 32px;
     right: 0px;
     display: none;
+    padding-top: 5px;
+    z-index: 20;
+}
+
+.user-form {
     width: 277px;
     border-radius: 5px;
     padding: 20px 17px 22px 19px;
@@ -387,13 +421,13 @@ input[type="radio"].visually-hidden {
 }
 
 .user-form input[type="password"] {
-    padding: 20px 15px;
+    /* padding: 20px 15px; */
     margin: 20px 0;
 }
 
 .user-form .button-enter {
     display: block;
-    padding: 15px 25px;
+    padding: 12px 25px;
     border-radius: 24px;
 }
 
@@ -420,7 +454,20 @@ input[type="radio"].visually-hidden {
 
 /* Формат когда в корзине есть товары */
 
-.shopping-cart-content .shopping-cart-link {
+.basket-content {
+    position: relative;
+}
+
+.basket-content .basket-list {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    padding-bottom: 15px;
+    list-style: none;
+    border-bottom: 1px solid #cacac7;
+}
+
+.basket-content .basket-link {
     display: block;
     border-radius: 16px;
     padding: 10px 15px 9px 44px;
@@ -434,28 +481,117 @@ input[type="radio"].visually-hidden {
     background-position: 16px 6px;
 }
 
-.shopping-cart-form {
+.basket-form-container {
+    position: absolute;
     width: 540px;
     display: none;
-    position: absolute;
-    left: 955px;
+    top: 36px;
+    right: 0;
+    padding-top: 4px;
+    /* outline: 1px solid red; */
+    z-index: 20;
+}
+
+.basket-form {
+    display: block;
+    padding: 20px 15px;
+    text-align: right;
     color: #323232;
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
+    border-radius: 5px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
 }
 
-.shopping-cart-content:hover .shopping-cart-form,
-.shopping-cart-content:focus .shopping-cart-form {
+.basket-content:hover .basket-form-container,
+.basket-content:focus .basket-form-container {
     display: block;
+}
+
+.basket-item {
+    display: flex;
+    align-items: flex-start;
+    min-height: 33px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.basket-item:last-child {
+    margin: 0;
+}
+
+.button-item-delete {
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin-right: 14px;
+    cursor: pointer;
+    background-image: url("../img/icon-cross-small.svg");
+    background-repeat: no-repeat;
+}
+
+.basket-photo {
+    margin-top: -10px;
+    display: block;
+    margin-right: 14px;
+}
+
+.basket-item-title {
+    display: block;
+    width: 222px;
+    margin: 0;
+    margin-right: 20px;
+    /* padding-top: 6px; */
+    text-align: left;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.basket-item-count {
+    display: block;
+    width: 105px;
+    margin-right: 20px;
+    text-align: right;
+    color: #999999;
+}
+
+.basket-item-count span {
+    color: #323232;
+}
+
+.basket-item-total {
+    display: block;
+    width: 58px;
+    text-align: right;
+}
+
+.basket-total {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.button-basket {
+    padding: 10px 14px;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 24px;
 }
 
 
 /* Формат когда в корзине нет товаров */
 
-.shopping-cart-empty .shopping-cart-link {
+.basket-empty .basket-link {
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
@@ -662,9 +798,9 @@ input[type="radio"].visually-hidden {
     line-height: 16px;
 }
 
-.filters-line-1 {
+.filters-form {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .filters fieldset {
@@ -737,11 +873,6 @@ input[type="radio"].visually-hidden {
 
 .filter-fat-item:not(:last-child) {
     margin-right: 19px;
-}
-
-.filters-line-2 {
-    display: flex;
-    align-items: center;
 }
 
 .filter-filler {
@@ -1316,24 +1447,86 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
 }
 
-.user-message {
+.modal-overlay {
     display: none;
-    width: 478px;
-    min-height: 443px;
-    border-radius: 10px;
-    background-color: #f8f7f4;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    background: #000000;
+    opacity: 0.3;
+    cursor: pointer;
 }
 
-.user-message p {
+.user-message {
+    display: none;
+    position: fixed;
+    width: 478px;
+    min-height: 443px;
+    padding: 25px;
+    padding-top: 16px;
+    text-align: right;
+    border-radius: 10px;
+    background-color: #f8f7f4;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-open {
+    display: block;
+}
+
+.user-message .user-message-title {
+    margin: 0;
+    text-align: left;
+    margin-bottom: 20px;
     color: #323232;
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
 }
 
-.user-message form {
-    color: #999999;
+.user-message-form {
+    color: #323232;
     font-size: 16px;
     font-weight: 400;
+    line-height: 24px;
+}
+
+.user-message-form input {
+    display: block;
+    width: 268px;
+    padding: 11px 15px;
+    margin-bottom: 20px;
+}
+
+.user-message-form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+}
+
+.user-message .button-close {
+    position: absolute;
+    top: 16px;
+    right: 17px;
+    width: 18px;
+    height: 17px;
+    border: none;
+    background: url("../img/icon-cross-big.svg") no-repeat;
+    cursor: pointer;
+}
+
+.button-user-message {
+    text-align: right;
+    padding: 10px 24px;
+    border-radius: 24px;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 24px;
 }
