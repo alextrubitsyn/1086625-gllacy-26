@@ -83,7 +83,7 @@
                             <label class="visually-hidden" for="password">Ваш пароль</label>
                             <input class="user-password" type="password" id="password" name="password" placeholder="••••••••">
                             <div class="user-form-click">
-                                <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
+                                <button class="button button-enter" type="submit" name="button-entrance">Bones</button>
                                 <div class="user-form-link">
                                     <a class="account-link account-forget" href="#">Забыли пароль?</a>
                                     <a class="account-link account-newuser" href="#">Новая регистрация</a>
@@ -125,7 +125,7 @@
             </div>
         </div>
         <div class="header-worktime">
-            <p>С 10 до 20, ежедневно</p>
+            <span>С 10 до 20, ежедневно</span>
             <a class="header-phone" href="#">8 812 450-25-25</a>
         </div>
     </header>
@@ -150,54 +150,54 @@
                     </select>
                 </fieldset>
                 <fieldset class="filter-price">
-                    <legend>Цена:100 руб. – 500 руб.</legend>
+                    <legend>Цена: 100 руб. – 500 руб.</legend>
                     <span class="filter-price-container"></span>
                 </fieldset>
                 <fieldset class="filter-fat">
                     <legend>Жирность:</legend>
-                    <div class="filter-fat-list">
-                        <label class="filter-fat-item">
-                            <input class="visually-hidden" type="radio" name="filter-fat" value="zero">
-                            0%
-                        </label>
-                        <label class="filter-fat-item">
-                            <input class="visually-hidden" type="radio" name="filter-fat" value="before10" checked>
-                            до 10%
-                        </label>
-                        <label class="filter-fat-item">
-                            <input class="visually-hidden" type="radio" name="filter-fat" value="before30" >
-                            до 30%
-                        </label>
-                        <label class="filter-fat-item">
-                            <input class="visually-hidden" type="radio" name="filter-fat" value="after30">
-                            выше 30%
-                        </label>
-                    </div>
+                    <ul class="filter-fat-list">
+                        <li class="filter-fat-item">
+                            <input class="fat-input visually-hidden" id="zero" type="radio" name="filter-fat" value="zero">
+                            <label class="filter-fat-label" for="zero">0%</label>
+                        </li>
+                        <li class="filter-fat-item">
+                            <input class="fat-input visually-hidden" id="before10" type="radio" name="filter-fat" value="before10" checked>
+                            <label class="filter-fat-label filter-item-locked" for="before10">до 10%</label>
+                        </li>
+                        <li class="filter-fat-item">
+                            <input class="fat-input visually-hidden" id="before30" type="radio" name="filter-fat" value="before30">
+                            <label class="filter-fat-label" for="before30">до 30%</label>
+                        </li>
+                        <li class="filter-fat-item">
+                            <input class="fat-input visually-hidden" id="after30" type="radio" name="filter-fat" value="after30">
+                            <label class="filter-fat-label" for="after30">выше 30%</label>
+                        </li>
+                    </ul>
                 </fieldset>
                 <fieldset class="filter-filler">
                     <legend>Наполнители:</legend>
-                    <div class="filter-filler-list">
-                        <label class="filter-filler-item">
-                            <input class="visually-hidden" type="checkbox" name="chocolate" checked >
-                            шоколадные
-                        </label>
-                        <label class="filter-filler-item">
-                            <input class="visually-hidden" type="checkbox" name="sugar-powder" checked >
-                            сахарные присыпки
-                        </label>
-                        <label class="filter-filler-item">
-                            <input class="visually-hidden" type="checkbox" name="fruit">
-                            фрукты
-                        </label>
-                        <label class="filter-filler-item">
-                            <input class="visually-hidden" type="checkbox" name="syrup">
-                            сиропы
-                        </label>
-                        <label class="filter-filler-item">
-                            <input class="visually-hidden" type="checkbox" name="jam" >
-                            джемы
-                        </label>
-                    </div>
+                    <ul class="filter-filler-list">
+                        <li class="filter-filler-item">
+                            <input class="visually-hidden filler-input" id="chocolate" type="checkbox" name="chocolate" checked>
+                            <label class="filter-filler-label" for="chocolate">шоколадные</label>
+                        </li>
+                        <li class="filter-filler-item">
+                            <input class="visually-hidden filler-input" id="sugar-powder" type="checkbox" name="sugar-powder" checked>
+                            <label class="filter-filler-label " for="sugar-powder">сахарные присыпки</label>
+                        </li>
+                        <li class="filter-filler-item">
+                            <input class="visually-hidden filler-input" id="fruit" type="checkbox" name="fruit">
+                            <label class="filter-filler-label filter-item-locked" for="fruit">фрукты</label>
+                        </li>
+                        <li class="filter-filler-item">
+                            <input class="visually-hidden filler-input" id="syrup" type="checkbox" name="syrup">
+                            <label class="filter-filler-label" for="syrup">сиропы</label>
+                        </li>
+                        <li class="filter-filler-item">
+                            <input class="visually-hidden filler-input" id="jam" type="checkbox" name="jam">
+                            <label class="filter-filler-label" for="jam">джемы</label>
+                        </li>
+                    </ul>
                 </fieldset>
                 <button class="button-filter" type="submit" name="button-filter">Применить</button>
             </form>
@@ -205,7 +205,7 @@
         <section class="catalog">
             <h2 class="visually-hidden">Список товаров</h2>
             <ul class="goods-list">
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                         <img class="goods-photo" src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -217,7 +217,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочно-кофейное с кусочками шоколада</h3>
                         <img class="goods-photo" src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
@@ -229,7 +229,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
                         <img class="goods-photo" src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
@@ -241,7 +241,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочное крем-брюле с карамельной подливкой</h3>
                         <img class="goods-photo" src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
@@ -253,9 +253,9 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
-                        <h3 class="goods-title">Сливочное с брусничным джемом</h3>
+                        <h3 class="goods-title">Сливочное с брусничным<br> джемом</h3>
                         <img class="goods-photo" src="img/ice-cream-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
                         <p>
                             <span class="goods-item-price">325</span>
@@ -265,7 +265,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочно-черничное с цельными ягодами черники</h3>
                         <img class="goods-photo" src="img/ice-cream-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
@@ -277,7 +277,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочно-лимонное с карамельной присыпкой</h3>
                         <img class="goods-photo" src="img/ice-cream-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
@@ -289,7 +289,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочное с шоколадной стружкой</h3>
                         <img class="goods-photo" src="img/ice-cream-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
@@ -301,9 +301,9 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
-                        <h3 class="goods-title">Сливочно-ванильное с кусочками шоколада</h3>
+                        <h3 class="goods-title">Сливочно-ванильное с кусочками<br> шоколада</h3>
                         <img class="goods-photo" src="img/ice-cream-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                         <p>
                             <span class="goods-item-price">440</span>
@@ -313,7 +313,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочноe с ментоловым сиропом</h3>
                         <img class="goods-photo" src="img/ice-cream-10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
@@ -325,7 +325,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочное с кусочками черного шоколада</h3>
                         <img class="goods-photo" src="img/ice-cream-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
@@ -337,7 +337,7 @@
                     </a>
                     <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                 </li>
-                <li class="goods-items">
+                <li class="goods-item">
                     <a class="goods-item-link" href="#">
                         <h3 class="goods-title">Сливочное с мятным сиропом</h3>
                         <img class="goods-photo" src="img/ice-cream-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
@@ -351,7 +351,7 @@
                 </li>
             </ul>
             <ul class="pagination-list">
-                <li class="pagination-item pagination-item-before pagintion-disabled">
+                <li class="pagination-item pagination-item-before pagination-disabled">
                     <a class="pagination-link" href="#">
                         <span class="visually-hidden">Назад</span>
                     </a>
