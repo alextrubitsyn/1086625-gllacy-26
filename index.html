@@ -68,7 +68,7 @@
                         <div class="search-form-container">
                             <form class="search-form" action="https://echo.gllacy.ru" method="get">
                                 <label class="visually-hidden" for="field-search">Поле для поиска</label>
-                                <input type="search" placeholder="Крем-брюле" name="search" id="field-search">
+                                <input type="search" placeholder="Крем-брюле" name="search" autocomplete="off" id="field-search">
                             </form>
                         </div>
                     </div>
@@ -86,9 +86,9 @@
                         <div class="user-form-container">
                             <form class="user-form" action="https://echo.gllacy.ru" method="post">
                                 <label class="visually-hidden" for="login">Ваш логин</label>
-                                <input class="user-login" type="text" id="login" name="login" placeholder="email@example.com">
+                                <input class="user-login" type="text" id="login" name="login" autocomplete="off" placeholder="email@example.com">
                                 <label class="visually-hidden" for="password">Ваш пароль</label>
-                                <input class="user-password" type="password" id="password" name="password" placeholder="••••••••">
+                                <input class="user-password" type="password" id="password" name="password" autocomplete="off" placeholder="••••••••">
                                 <div class="user-form-click">
                                     <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
                                     <div class="user-form-link">
@@ -232,15 +232,17 @@
                     </a>
                 </article>
                 <section class="subscription">
-                    <h2 class="visually-hidden">Форма подписки</h2>
-                    <p>
-                        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-                    </p>
-                    <form class="subscription-form" action="https://echo.gllacy.ru" method="post">
-                        <label class="visually-hidden" for="subscription-email">Ваш e-mail</label>
-                        <input type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com">
-                        <button class="button" type="submit" name="subscription">Отправить</button>
-                    </form>
+                    <div class="subscription-container">
+                        <h2 class="visually-hidden">Форма подписки</h2>
+                        <p>
+                            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                        </p>
+                        <form class="subscription-form" action="https://echo.gllacy.ru" method="post">
+                            <label class="visually-hidden" for="subscription-email">Ваш e-mail</label>
+                            <input type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com">
+                            <button class="button" type="submit" name="subscription">Отправить</button>
+                        </form>
+                    </div>
                 </section>
             </div>
         </main>
