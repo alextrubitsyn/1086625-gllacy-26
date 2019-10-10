@@ -1,3 +1,24 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto.woff2"), url("../fonts/roboto.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/robotomedium.woff2"), url("../fonts/robotomedium.woff");
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/robotobold.woff2"), url("../fonts/robotobold.woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -40,8 +61,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 27px;
 }
@@ -64,6 +84,10 @@ input[type="radio"].visually-hidden {
     clip-path: inset(100%);
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
+}
+
+input:active+label.visually-hidden {
+    display: none;
 }
 
 a.button {
@@ -141,13 +165,13 @@ a.button {
     }
 }
 
+.main-header {
+    padding-top: 2px;
+}
+
 .main-header a {
     text-decoration: none;
     display: block;
-}
-
-.main-header {
-    padding-top: 2px;
 }
 
 .header-firstline {
@@ -171,8 +195,9 @@ a.button {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    margin: 0;
     padding: 0;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
 }
 
 .navigation-menu .navigation-menu-link {
@@ -195,8 +220,6 @@ a.button {
 
 .navigation-menu-item:hover>.navigation-menu-link,
 .navigation-menu-item:focus>.navigation-menu-link {
-    /* width: 87px; */
-    /* height: 32px; */
     color: #323232;
     font-size: 16px;
     font-weight: 700;
@@ -205,8 +228,6 @@ a.button {
 }
 
 .navigation-menu-item:active>.navigation-menu-link {
-    /* width: 87px; */
-    /* height: 32px; */
     color: #323232;
     font-size: 16px;
     font-weight: 700;
@@ -220,13 +241,13 @@ a.button {
     top: 100%;
     left: -7px;
     display: none;
-    padding-top: 11px;
+    padding-top: 6px;
     z-index: 20;
 }
 
 .navigation-submenu {
     margin: 0;
-    padding: 0;
+    padding: 1px 0 8px;
     border-radius: 5px;
     width: 143px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -241,6 +262,7 @@ a.button {
 
 .navigation-submenu-link {
     display: block;
+    padding: 10px 20px 5px;
     color: #323232;
     font-size: 14px;
     font-weight: 400;
@@ -268,11 +290,8 @@ a.button {
     background-color: #f6b5a5;
 }
 
-.navigation-submenu-link {
-    padding: 10px 20px;
-}
-
 .navigation-submenu-item:first-child .navigation-submenu-link {
+    padding-bottom: 12px;
     font-weight: 700;
     background-image: url("../img/share.png");
     background-repeat: no-repeat;
@@ -284,7 +303,6 @@ a.button {
 .navigation-menu-item:focus>.navigation-menu-active {
     color: #ffffff;
     background-color: #d07058;
-    /* border-radius: 16px; */
 }
 
 .navigation-submenu .navigation-submenu-active {
@@ -297,18 +315,20 @@ a.button {
     align-items: center;
     margin-top: 0;
     margin-left: auto;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
 }
 
 .search {
     position: relative;
+    margin-right: 9px;
 }
 
 .search-link,
 .search:not(:active) .search-link {
     width: 33px;
     height: 33px;
-    padding: 8px 8px 8px 8px;
+    padding: 8px;
+    padding-bottom: 6px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -321,8 +341,8 @@ a.button {
 .search-form-container {
     position: absolute;
     top: 100%;
-    right: 0px;
-    padding-top: 11px;
+    right: 2px;
+    padding-top: 4px;
     display: none;
     z-index: 20;
 }
@@ -354,7 +374,7 @@ a.button {
 .search-form input,
 .user-form input {
     height: 44px;
-    padding: 10px 15px;
+    padding: 10px 14px;
     color: #323232;
     font-size: 14px;
     font-weight: 400;
@@ -367,22 +387,22 @@ a.button {
 .search-form input:hover,
 .user-form input:hover {
     border: 2px solid rgba(154, 154, 154, 0.52);
-    padding-left: 14px;
+    padding-left: 13px;
 }
 
 .search-form input:focus,
 .user-form input:focus {
     border: 2px solid rgba(46, 136, 228, 0.52);
-    padding-left: 14px;
+    padding-left: 13px;
 }
 
 .user-account {
     position: relative;
-    margin-left: 10px;
 }
 
-.user-account-link {
-    padding: 8px 17px 8px 14px;
+.user-account .user-account-link {
+    display: inline-block;
+    padding: 6px 16px 7px 17px;
     border-radius: 16px;
     color: #ffffff;
     font-size: 14px;
@@ -392,13 +412,11 @@ a.button {
 }
 
 .user-account-link svg {
-    display: inline-block;
     vertical-align: top;
-    margin-right: 2px;
+    margin-right: 3px;
 }
 
 .user-account-link span {
-    display: inline-block;
     vertical-align: top;
     line-height: 19px;
 }
@@ -426,9 +444,9 @@ a.button {
 .user-form-container {
     position: absolute;
     top: 100%;
-    right: 0px;
+    right: -2px;
     display: none;
-    padding-top: 12px;
+    padding-top: 4px;
     z-index: 20;
 }
 
@@ -441,7 +459,7 @@ a.button {
 }
 
 .user-form input {
-    width: 240px;
+    width: 100%;
 }
 
 .user-form input[type="password"] {
@@ -449,9 +467,14 @@ a.button {
 }
 
 .user-form .button-enter {
-    display: block;
-    padding: 12px 25px;
-    border-radius: 24px;
+    align-self: center;
+    margin-right: 20px;
+    padding: 11px 25px 9px;
+    border-radius: 20px;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
 }
 
 .user-account .account-link {
@@ -459,7 +482,7 @@ a.button {
     color: #323232;
     font-size: 13px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 21px;
     text-decoration: underline;
 }
 
@@ -471,7 +494,18 @@ a.button {
 
 .user-form-click {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.account-forget {
+    display: block;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+.account-newuser {
+    display: block;
+    margin: 0;
 }
 
 .basket {
@@ -495,7 +529,7 @@ a.button {
     background-color: rgba(255, 255, 255, 0.2);
     background-image: url("../img/icon-basket.svg");
     background-repeat: no-repeat;
-    background-position: 16px 6px;
+    background-position: 17px 6px;
 }
 
 
@@ -517,7 +551,7 @@ a.button {
 .basket-content .basket-link {
     display: block;
     border-radius: 16px;
-    padding: 8px 15px 8px 44px;
+    padding: 8px 16px 8px 44px;
     color: #323232;
     font-size: 14px;
     font-weight: 500;
@@ -534,13 +568,13 @@ a.button {
     display: none;
     top: 100%;
     right: 0;
-    padding-top: 5px;
+    padding-top: 4px;
     z-index: 20;
 }
 
 .basket-form {
     display: block;
-    padding: 20px 15px;
+    padding: 20px 14px 22px 16px;
     text-align: right;
     color: #323232;
     font-size: 13px;
@@ -562,7 +596,7 @@ a.button {
     align-items: flex-start;
     min-height: 33px;
     margin-bottom: 20px;
-    padding-top: 10px;
+    padding-top: 9px;
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
@@ -576,24 +610,23 @@ a.button {
     display: block;
     width: 11px;
     height: 11px;
-    margin-right: 14px;
+    margin-right: 15px;
     cursor: pointer;
     background-image: url("../img/icon-cross-small.svg");
     background-repeat: no-repeat;
 }
 
 .basket-photo {
-    margin-top: -10px;
+    margin-top: -9px;
     display: block;
-    margin-right: 14px;
+    margin-right: 12px;
 }
 
 .basket-item-title {
     display: block;
     width: 222px;
     margin: 0;
-    margin-right: 20px;
-    /* padding-top: 6px; */
+    margin-right: 15px;
     text-align: left;
     font-size: 13px;
     font-weight: 400;
@@ -620,7 +653,7 @@ a.button {
 
 .basket-total {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     font-size: 15px;
     font-weight: 700;
     line-height: 18px;
@@ -678,7 +711,7 @@ a.button {
 .offers {
     position: relative;
     margin-bottom: 40px;
-    padding-top: 274px;
+    padding-top: 275px;
     text-align: center;
 }
 
@@ -696,7 +729,7 @@ a.button {
 }
 
 .button-kit {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     padding: 10px 40px;
     font-size: 32px;
     font-weight: 700;
@@ -751,7 +784,7 @@ a.button {
 
 .offer-kit-controls {
     position: absolute;
-    bottom: 294px;
+    bottom: 293px;
     left: 0;
     z-index: 10;
     font-size: 0;
@@ -760,7 +793,7 @@ a.button {
 .offer-kit-title {
     width: 700px;
     margin: 0 auto;
-    margin-bottom: 28px;
+    margin-bottom: 29px;
     font-size: 60px;
     font-weight: 700;
     line-height: 60px;
@@ -775,8 +808,8 @@ a.button {
     width: 560px;
     min-height: 230px;
     text-align: right;
-    padding: 15px 20px 23px 18px;
-    border-radius: 20px;
+    padding: 16px 20px 23px 18px;
+    border-radius: 15px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -784,7 +817,7 @@ a.button {
 
 .offers-addition .addition-title {
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     text-align: left;
     font-size: 35px;
     font-weight: 700;
@@ -815,15 +848,13 @@ a.button {
 .addition-raspberry {
     background-color: #c61142;
     background-image: url("../img/bg-banner-raspberry.png");
+    background-repeat: no-repeat;
 }
 
 .addition-chocolate {
     background-color: #4a2918;
     background-image: url("../img/bg-banner-chocolate.png");
-}
-
-.bestsellers .goods-list {
-    margin-bottom: 0px;
+    background-repeat: no-repeat;
 }
 
 
@@ -852,8 +883,7 @@ a.button {
 
 .inner-page .catalog-title {
     margin: 0;
-    margin-bottom: 7px;
-    padding-top: 4px;
+    margin-bottom: 9px;
     font-size: 35px;
     font-weight: 700;
     line-height: 41px;
@@ -900,6 +930,10 @@ a.button {
     padding: 0;
 }
 
+.filter-category select::-ms-expand {
+    display: none;
+}
+
 .filter-category select {
     display: block;
     width: 194px;
@@ -921,25 +955,28 @@ a.button {
 .filter-category select:focus {
     color: #323232;
     background-image: url("../img/icon-down-black.svg");
-    /* background-position: 90% / 15%; */
-    background-size: 10px 16px;
+    background-size: 11px 12px;
     outline: none;
 }
 
 .filter-price {
-    margin-right: 12px;
+    margin-right: 16px;
     padding: 0;
+}
+
+.filter-price legend {
+    padding-left: 14px;
 }
 
 .filter-price-container {
     display: block;
-    width: 220px;
+    width: 216px;
     height: 37px;
     margin: 0;
     background-color: rgba(255, 255, 255, 0.2);
     background-image: url("../img/icon-filter-price.png");
     background-repeat: no-repeat;
-    background-position: 46%;
+    background-position: center;
     border-radius: 18px;
 }
 
@@ -951,6 +988,7 @@ a.button {
 /* FILTERS FAT */
 
 .filter-fat {
+    margin: 0;
     padding: 0;
 }
 
@@ -958,6 +996,7 @@ a.button {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     padding: 8px 17px 7px 14px;
     list-style: none;
     border-radius: 19px;
@@ -965,13 +1004,13 @@ a.button {
 }
 
 .filter-fat-item:not(:last-child) {
-    margin-right: 17px;
+    margin-right: 18px;
 }
 
 .filter-fat-label {
     position: relative;
-    display: block;
     padding-left: 32px;
+    line-height: 22px;
     cursor: pointer;
 }
 
@@ -1048,25 +1087,25 @@ a.button {
     background-size: 24px 20px;
 }
 
-.filters input+label:hover::after,
-.filters input+label:focus::after,
-.filters input:checked+label:hover::after,
-.filters input:checked+label:focus::after {
+.filters-input+label:hover::after,
+.filters-input+label:focus::after,
+.filters-input:checked+label:hover::after,
+.filters-input:checked+label:focus::after {
     opacity: 1;
 }
 
-.filters input:disabled+label,
-.filters input:disabled+label::after,
-.filters input:checked:disabled+label::after,
-.filters input:disabled+label:hover::after,
-.filters input:disabled+label:focus::after {
+.filters-input:disabled+label,
+.filters-input:disabled+label::after,
+.filters-input:checked:disabled+label::after,
+.filters-input:disabled+label:hover::after,
+.filters-input:disabled+label:focus::after {
     opacity: 0.4;
     cursor: default;
 }
 
 .button-filter {
     align-self: flex-end;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     width: 144px;
     height: 36px;
     font-size: 16px;
@@ -1076,7 +1115,6 @@ a.button {
     border: 2px solid #ffffff;
     border-radius: 18px;
     background-color: rgba(255, 255, 255, 0.2);
-    border: none;
 }
 
 .button-filter:hover,
@@ -1095,15 +1133,25 @@ a.button {
 
 /*  GOODS  */
 
-.goods-list {
+.catalog .goods-list {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     padding: 0;
     list-style: none;
+}
+
+.bestsellers .goods-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 38px;
+    padding: 0;
 }
 
 .goods-list .goods-item {
@@ -1111,7 +1159,11 @@ a.button {
     flex-direction: column;
     position: relative;
     width: 267px;
-    margin-bottom: 42px;
+    margin-bottom: 39px;
+}
+
+.bestsellers .goods-item {
+    margin-bottom: 0;
 }
 
 .goods-item:hover .button-quick-view {
@@ -1129,6 +1181,7 @@ a.button {
     height: calc(100% + 87px);
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     background-color: rgba(248, 247, 244, 0.2);
+    border-radius: 5px;
     z-index: 1;
     animation: open-form 0.4s;
 }
@@ -1141,7 +1194,8 @@ a.button {
 
 .goods-item-link .goods-title {
     margin: 0;
-    margin-top: 18px;
+    margin-top: 27px;
+    padding: 0 5px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 500;
@@ -1161,13 +1215,13 @@ a.button {
     margin: 0 auto;
 }
 
-.goods-list p {
+.goods-list .goods-item-price {
+    align-self: flex-start;
+    position: relative;
     margin: 0;
     margin-top: -60px;
-}
-
-.goods-list span {
-    margin: 0;
+    margin-left: -1px;
+    padding-right: 80px;
     text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
     color: #ffffff;
     font-size: 45px;
@@ -1175,9 +1229,18 @@ a.button {
     line-height: 45px;
 }
 
-.goods-list .goods-item-unit {
-    margin-left: -5px;
-    font-size: 30px;
+.goods-list .goods-item-price::after {
+    position: absolute;
+    width: 77px;
+    height: 39px;
+    right: 0px;
+    top: 7px;
+    content: "";
+    background: url("../img/ruble.png") no-repeat;
+}
+
+.bestsellers .goods-item-price::after {
+    top: 5px;
 }
 
 .button-quick-view {
@@ -1203,7 +1266,7 @@ a.button {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
-    padding: 24px 20px 16px;
+    padding: 25px 20px 14px;
     color: #323232;
     background-color: #ede2ca;
     background-image: url("../img/bg-seo.png");
@@ -1288,8 +1351,7 @@ a.button {
     width: 560px;
     min-height: 220px;
     margin-right: 26px;
-    /* padding-left: 20px; */
-    padding: 22px 20px;
+    padding: 23px 20px;
     background-color: #ffffff;
     background-image: url("../img/bg-news-strawberry.jpg");
     background-repeat: repeat;
@@ -1395,12 +1457,9 @@ a.button {
 }
 
 .map {
-    /* position: relative; */
     height: 430px;
     margin-left: auto;
     margin-right: auto;
-    /* padding-top: 60px; */
-    /* padding-bottom: 60px; */
     background-image: url("../img/map.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -1408,13 +1467,16 @@ a.button {
 }
 
 .map .map-frame {
-    z-index: 0;
     position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 0;
 }
 
 .map .container {
     height: 100%;
-    margin-top: -434px;
+    margin-top: -430px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -1426,6 +1488,7 @@ a.button {
     width: 304px;
     max-height: 90%;
     overflow: auto;
+    margin-bottom: 10px;
     padding: 32px 25px;
     padding-left: 26px;
     font-size: 14px;
@@ -1454,7 +1517,7 @@ a.button {
 }
 
 .contacts-phone {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
 }
 
 .contacts-phone-title {
@@ -1462,6 +1525,8 @@ a.button {
 }
 
 .contacts-phone-link {
+    display: block;
+    margin-bottom: 1px;
     text-decoration: none;
     color: #323232;
 }
@@ -1494,7 +1559,7 @@ a.button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 17px;
     padding-bottom: 26px;
 }
 
@@ -1503,6 +1568,7 @@ a.button {
 
 .footer-social {
     width: 25%;
+    padding-top: 4px;
 }
 
 .footer-social .social-list {
@@ -1552,7 +1618,7 @@ a.button {
 .footer-documents {
     width: 50%;
     padding-left: 114px;
-    padding-top: 13px;
+    padding-top: 14px;
 }
 
 .footer-documents .documents-list {
@@ -1630,7 +1696,6 @@ a.button {
 .footer-copyright .htmlacademy-logo-image {
     display: inline-block;
     vertical-align: top;
-    /* height: 39px; */
 }
 
 .footer-copyright p {
@@ -1653,7 +1718,7 @@ a.button {
 
 .breadcrumbs {
     position: relative;
-    top: -72px;
+    top: -68px;
     display: inline-flex;
     align-items: baseline;
     margin: 0;
@@ -1687,7 +1752,7 @@ a.button {
 }
 
 .breadcrumbs .breadcrumbs-item:not(:last-child) {
-    margin-right: 6px;
+    margin-right: 5px;
 }
 
 .breadcrumbs .breadcrumbs-link:hover,
@@ -1788,7 +1853,6 @@ a.button {
 @keyframes shake {
     0%,
     100% {
-        /* transform: translate(-50%, -50%); */
         transform: translate(-50%, -50%) rotate(0);
     }
     10%,
