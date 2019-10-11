@@ -1,6 +1,7 @@
 const modalButton = document.querySelector('.button-message');
 const closeButton = document.querySelector('.button-close');
 const overlay = document.querySelector('.modal-overlay');
+const sentButton = document.querySelector('.button-user-message')
 const modal = document.querySelector('.modal-user-message');
 const form = modal.querySelector('form');
 const fullName = modal.querySelector('[name=message-fullname]');
@@ -21,11 +22,18 @@ if (modalButton && closeButton && overlay && modal) {
     }
 
     function closeModal(event) {
-        event.preventDefault();
+        if (event && event.preventDefault) {
+            event.preventDefault();
+        }
 
         overlay.classList.remove('overlay-open');
         modal.classList.remove('modal-open');
         modal.classList.remove('modal-error');
+        modal.classList.remove('modal-sent');
+        fullName.value = '';
+        eMail.value = '';
+        message.value = '';
+
     }
 
     form.addEventListener('submit', function(event) {
@@ -36,7 +44,8 @@ if (modalButton && closeButton && overlay && modal) {
             modal.offsetWidth = modal.offsetWidth;
             modal.classList.add('modal-error');
         } else {
-            closeModal(event);
+            modal.classList.add('modal-sent');
+            setTimeout(closeModal, 500);
         }
     });
 
@@ -45,8 +54,7 @@ if (modalButton && closeButton && overlay && modal) {
             event.preventDefault();
 
             if (modal.classList.contains('modal-open')) {
-                modal.classList.remove('modal-open');
-                overlay.classList.remove('overlay-open');
+                closeModal();
             }
         }
     });

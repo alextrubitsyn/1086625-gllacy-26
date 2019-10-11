@@ -38,7 +38,7 @@ body {
 }
 
 .site-wrapper {
-    min-width: 940px;
+    min-width: 1200px;
     background-color: #849d8f;
     background-image: url("../img/slider-photo-1.png");
     background-repeat: no-repeat;
@@ -153,15 +153,6 @@ a.button {
     to {
         transform: scaleX(1);
         transform-origin: 50% 50%;
-    }
-}
-
-@keyframes slider {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
 
@@ -802,13 +793,14 @@ a.button {
 .offers-addition {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .offers-addition .addition-item {
     width: 560px;
     min-height: 230px;
     text-align: right;
-    padding: 16px 20px 23px 18px;
+    padding: 14px 20px 23px 18px;
     border-radius: 15px;
     background-position: center;
     background-repeat: no-repeat;
@@ -817,7 +809,7 @@ a.button {
 
 .offers-addition .addition-title {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     text-align: left;
     font-size: 35px;
     font-weight: 700;
@@ -874,11 +866,12 @@ a.button {
 /* CATALOG */
 
 .inner-page {
+    min-width: 1200px;
     background-color: #849d8f;
     background-image: url("../img/bg-catalog-lighting.png");
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 100% auto;
+    background-size: cover;
 }
 
 .inner-page .catalog-title {
@@ -1402,7 +1395,7 @@ a.button {
 }
 
 .subscription-container {
-    padding: 28px 22px 35px;
+    padding: 28px 20px 35px;
     background-color: #f8f7f4;
     border-radius: 15px;
 }
@@ -1457,46 +1450,53 @@ a.button {
 }
 
 .map {
-    height: 430px;
+    position: relative;
+    min-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     background-image: url("../img/map.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+}
+
+.map .container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 62px;
+    padding-bottom: 58px;
+    z-index: 1;
 }
 
 .map .map-frame {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    display: block;
+    position: absolute;
+    min-width: 100%;
+    width: auto;
+    min-height: 100%;
+    height: auto;
     border: none;
     z-index: 0;
 }
 
-.map .container {
-    height: 100%;
-    margin-top: -430px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 1;
-    position: relative;
-}
-
 .map .contacts {
+    position: relative;
     width: 304px;
-    max-height: 90%;
-    overflow: auto;
-    margin-bottom: 10px;
-    padding: 32px 25px;
-    padding-left: 26px;
+    margin-bottom: 5px;
+    padding: 30px 25px 30px;
+    padding-left: 27px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     color: #323232;
     border-radius: 10px;
     background-color: #ffffff;
+    z-index: 1;
 }
 
 .contacts span {
@@ -1509,11 +1509,11 @@ a.button {
 }
 
 .contacts-address {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .contacts-address-title {
-    padding-right: 100px;
+    padding-right: 94px;
 }
 
 .contacts-phone {
@@ -1526,7 +1526,7 @@ a.button {
 
 .contacts-phone-link {
     display: block;
-    margin-bottom: 1px;
+    margin-bottom: 3px;
     text-decoration: none;
     color: #323232;
 }
@@ -1545,7 +1545,8 @@ a.button {
 }
 
 .contacts .button {
-    padding: 10px 28px;
+    display: block;
+    padding: 8px 0 12px;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -1843,10 +1844,19 @@ a.button {
 
 @keyframes modal {
     from {
-        transform: translate(-50%, -50%) scale(0, 0);
+        transform: translate(50%, 20%) scale(0, 0);
     }
     to {
         transform: translate(-50%, -50%) scale(1, 1);
+    }
+}
+
+@keyframes sent {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1, 1);
+    }
+    to {
+        transform: translate(1000px, -50%) rotate(360deg) scale(0, 0);
     }
 }
 
@@ -1911,6 +1921,10 @@ a.button {
 
 .modal-error {
     animation: shake 0.6s;
+}
+
+.modal-sent {
+    animation: sent 0.8s;
 }
 
 .modal-user-message .user-message-title {
