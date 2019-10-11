@@ -8,7 +8,7 @@
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/robotomedium.woff2"), url("../fonts/robotomedium.woff");
-    font-weight: medium;
+    font-weight: 500;
     font-style: normal;
 }
 
