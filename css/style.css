@@ -1461,18 +1461,6 @@ a.button {
     overflow: hidden;
 }
 
-.map .container {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-    margin: 0 auto;
-    padding-top: 62px;
-    padding-bottom: 58px;
-    z-index: 1;
-}
-
 .map .map-frame {
     display: block;
     position: absolute;
@@ -1481,7 +1469,19 @@ a.button {
     min-height: 100%;
     height: auto;
     border: none;
-    z-index: 0;
+    z-index: 2;
+}
+
+.map .container {
+    /* position: relative; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 62px;
+    padding-bottom: 58px;
+    /* z-index: 1; */
 }
 
 .map .contacts {
@@ -1496,7 +1496,7 @@ a.button {
     color: #323232;
     border-radius: 10px;
     background-color: #ffffff;
-    z-index: 1;
+    z-index: 10;
 }
 
 .contacts span {
