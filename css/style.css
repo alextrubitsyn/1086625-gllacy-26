@@ -1473,7 +1473,6 @@ a.button {
 }
 
 .map .container {
-    /* position: relative; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -1481,7 +1480,6 @@ a.button {
     margin: 0 auto;
     padding-top: 62px;
     padding-bottom: 58px;
-    /* z-index: 1; */
 }
 
 .map .contacts {
