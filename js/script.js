@@ -1,12 +1,12 @@
-const modalButton = document.querySelector('.button-message');
-const closeButton = document.querySelector('.button-close');
-const overlay = document.querySelector('.modal-overlay');
-const sentButton = document.querySelector('.button-user-message')
-const modal = document.querySelector('.modal-user-message');
-const form = modal.querySelector('form');
-const fullName = modal.querySelector('[name=message-fullname]');
-const eMail = modal.querySelector('[name=message-email]');
-const message = modal.querySelector('[name=message-text]');
+var modalButton = document.querySelector('.button-message');
+var closeButton = document.querySelector('.button-close');
+var overlay = document.querySelector('.modal-overlay');
+var sentButton = document.querySelector('.button-user-message')
+var modal = document.querySelector('.modal-user-message');
+var form = modal.querySelector('form');
+var fullName = modal.querySelector('[name=message-fullname]');
+var eMail = modal.querySelector('[name=message-email]');
+var message = modal.querySelector('[name=message-text]');
 
 if (modalButton && closeButton && overlay && modal) {
     modalButton.addEventListener('click', openModal);

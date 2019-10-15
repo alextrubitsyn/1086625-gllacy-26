@@ -6,13 +6,14 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="css/style-short.css" rel="stylesheet">
 </head>
 
 <body>
-    <input class="visually-hidden" type="radio" id="offer-1" name="offer-kit" value="offer-1" checked/>
-    <input class="visually-hidden" type="radio" id="offer-2" name="offer-kit" value="offer-2" />
-    <input class="visually-hidden" type="radio" id="offer-3" name="offer-kit" value="offer-3" />
+    <input class="slider visually-hidden" type="radio" id="offer-1" name="offer-kit" value="offer-1" checked/>
+    <input class="slider visually-hidden" type="radio" id="offer-2" name="offer-kit" value="offer-2" />
+    <input class="slider visually-hidden" type="radio" id="offer-3" name="offer-kit" value="offer-3" />
 
     <div class="site-wrapper">
         <header class="main-header container">
@@ -67,7 +68,7 @@
                         <h2 class="visually-hidden">Поиск товара</h2>
                         <div class="search-form-container">
                             <form class="search-form" action="https://echo.gllacy.ru" method="get">
-                                <input type="search" placeholder="Крем-брюле" name="search" autocomplete="off" id="field-search">
+                                <input type="search" placeholder="Крем-брюле" name="search" autocomplete="off" id="field-search" title="Набери, и мы приложим все усилия, чтобы это отыскать :)">
                                 <label class="visually-hidden" for="field-search">Поле для поиска</label>
                             </form>
                         </div>
@@ -85,9 +86,9 @@
                         <h2 class="visually-hidden">Личный кабинет</h2>
                         <div class="user-form-container">
                             <form class="user-form" action="https://echo.gllacy.ru" method="post">
-                                <input class="user-login" type="text" id="login" name="login" autocomplete="off" placeholder="email@example.com">
+                                <input class="user-login" type="text" id="login" name="login" autocomplete="off" placeholder="email@example.com" title="Введите Ваш логин (e-mail)">
                                 <label class="visually-hidden" for="login">Ваш логин</label>
-                                <input class="user-password" type="password" id="password" name="password" autocomplete="off" placeholder="••••••••">
+                                <input class="user-password" type="password" id="password" name="password" autocomplete="off" placeholder="••••••••" title="Введите Ваш пароль">
                                 <label class="visually-hidden" for="password">Ваш пароль</label>
                                 <div class="user-form-click">
                                     <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
@@ -222,7 +223,7 @@
                             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                         </p>
                         <form class="subscription-form" action="https://echo.gllacy.ru" method="post">
-                            <input type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com">
+                            <input type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com" title="Введите Ваш e-mail">
                             <label class="visually-hidden" for="subscription-email">Ваш e-mail</label>
                             <button class="button" type="submit" name="subscription">Отправить</button>
                         </form>
@@ -256,7 +257,7 @@
                 <h2 class="visually-hidden">Мы в социальных сетях</h2>
                 <ul class="social-list">
                     <li class="social-item">
-                        <a class="social social-twitter" href="#">
+                        <a class="social social-twitter" href="#" title="Мы в твиттере">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                                 <path fill="#ffffff" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463
                                  10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221
@@ -268,7 +269,7 @@
                         </a>
                     </li>
                     <li class="social-item">
-                        <a class="social social-instagram" href="#">
+                        <a class="social social-instagram" href="#" title="Мы в инстаграмм">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                                 <g fill="#ffffff">
                                     <path d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"/>
@@ -282,7 +283,7 @@
                         </a>
                     </li>
                     <li class="social-item">
-                        <a class="social social-facebook" href="#">
+                        <a class="social social-facebook" href="#" title="Мы в фейсбук">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                                 <path fill="#ffffff" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 
                                 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 
@@ -292,7 +293,7 @@
                         </a>
                     </li>
                     <li class="social-item">
-                        <a class="social social-vkontakte" href="#">
+                        <a class="social social-vkontakte" href="#" title="Мы вКонтакте">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                                 <g fill="#ffffff">
                                     <path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.15-.797 
@@ -345,17 +346,18 @@
             <h2 class="visually-hidden">Форма обратной связи</h2>
             <p class="user-message-title">Мы обязательно вам ответим!</p>
             <form class="user-message-form" action="https://echo.gllacy.ru" method="post">
-                <input type="text" id="message-fullname" name="message-fullname" placeholder="Имя Фамилия">
+                <input type="text" id="message-fullname" name="message-fullname" placeholder="Имя Фамилия" title="Введите Ваше имя и фамилию (обязательное поле)">
                 <label class="visually-hidden" for="message-fullname">Ваше имя и фамилия</label>
-                <input type="email" id="message-email" name="message-email" placeholder="email@example.com">
+                <input type="email" id="message-email" name="message-email" placeholder="email@example.com" title="Введите Ваш e-mail (обязательное поле)">
                 <label class="visually-hidden" for="message-email">Ваш e-mail</label>
-                <textarea name="message-text" id="message-text" placeholder="В свободной форме" cols="44" rows="7"></textarea>
+                <textarea name="message-text" id="message-text" placeholder="В свободной форме" cols="44" rows="7" title="Ваше сообщение (обязательное поле)"></textarea>
                 <button class="button-close" type="button" aria-label="Закрыть форму"></button>
                 <button class="button button-user-message" type="submit" name="button-message">Отправить</button>
             </form>
         </section>
     </div>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script-short.js"></script>
 </body>
 
 </html>
