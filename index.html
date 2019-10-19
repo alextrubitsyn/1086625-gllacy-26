@@ -68,7 +68,7 @@
                         <h2 class="visually-hidden">Поиск товара</h2>
                         <div class="search-form-container">
                             <form class="search-form" action="https://echo.gllacy.ru" method="get">
-                                <input type="search" placeholder="Крем-брюле" name="search" autocomplete="off" id="field-search" title="Набери, и мы приложим все усилия, чтобы это отыскать :)">
+                                <input class="placeholder" type="search" placeholder="Крем-брюле" name="search" autocomplete="off" id="field-search" title="Набери, и мы приложим все усилия, чтобы это отыскать :)">
                                 <label class="visually-hidden" for="field-search">Поле для поиска</label>
                             </form>
                         </div>
@@ -86,9 +86,9 @@
                         <h2 class="visually-hidden">Личный кабинет</h2>
                         <div class="user-form-container">
                             <form class="user-form" action="https://echo.gllacy.ru" method="post">
-                                <input class="user-login" type="text" id="login" name="login" autocomplete="off" placeholder="email@example.com" title="Введите Ваш логин (e-mail)">
+                                <input class="user-login placeholder" type="text" id="login" name="login" autocomplete="off" placeholder="email@example.com" title="Введите Ваш логин (e-mail)">
                                 <label class="visually-hidden" for="login">Ваш логин</label>
-                                <input class="user-password" type="password" id="password" name="password" autocomplete="off" placeholder="••••••••" title="Введите Ваш пароль">
+                                <input class="user-password placeholder" type="password" id="password" name="password" autocomplete="off" placeholder="••••••••" title="Введите Ваш пароль">
                                 <label class="visually-hidden" for="password">Ваш пароль</label>
                                 <div class="user-form-click">
                                     <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
@@ -159,7 +159,7 @@
                         </a>
                         <img class="goods-photo" src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                         <span class="goods-item-price">310</span>
-                        <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                        <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="goods-item goods-item-hit">
                         <a class="goods-item-link" href="#">
@@ -167,7 +167,7 @@
                         </a>
                         <img class="goods-photo" src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                         <span class="goods-item-price">380</span>
-                        <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                        <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="goods-item goods-item-hit">
                         <a class="goods-item-link" href="#">
@@ -175,7 +175,7 @@
                         </a>
                         <img class="goods-photo" src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                         <span class="goods-item-price">355</span>
-                        <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                        <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="goods-item goods-item-hit">
                         <a class="goods-item-link" href="#">
@@ -183,7 +183,7 @@
                         </a>
                         <img class="goods-photo" src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                         <span class="goods-item-price">415</span>
-                        <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                        <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                     </li>
                 </ul>
             </section>
@@ -200,7 +200,6 @@
                     <li class="features-cow features-item">
                         Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
                     </li>
-
                     <li class="features-eco features-item">
                         Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
                     </li>
@@ -223,7 +222,7 @@
                             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                         </p>
                         <form class="subscription-form" action="https://echo.gllacy.ru" method="post">
-                            <input type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com" title="Введите Ваш e-mail">
+                            <input class="placeholder" type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com" title="Введите Ваш e-mail">
                             <label class="visually-hidden" for="subscription-email">Ваш e-mail</label>
                             <button class="button" type="submit" name="subscription">Отправить</button>
                         </form>
@@ -346,9 +345,9 @@
             <h2 class="visually-hidden">Форма обратной связи</h2>
             <p class="user-message-title">Мы обязательно вам ответим!</p>
             <form class="user-message-form" action="https://echo.gllacy.ru" method="post">
-                <input type="text" id="message-fullname" name="message-fullname" placeholder="Имя Фамилия" title="Введите Ваше имя и фамилию (обязательное поле)">
+                <input class="placeholder" type="text" id="message-fullname" name="message-fullname" placeholder="Имя Фамилия" title="Введите Ваше имя и фамилию (обязательное поле)">
                 <label class="visually-hidden" for="message-fullname">Ваше имя и фамилия</label>
-                <input type="email" id="message-email" name="message-email" placeholder="email@example.com" title="Введите Ваш e-mail (обязательное поле)">
+                <input class="placeholder" type="email" id="message-email" name="message-email" placeholder="email@example.com" title="Введите Ваш e-mail (обязательное поле)">
                 <label class="visually-hidden" for="message-email">Ваш e-mail</label>
                 <textarea name="message-text" id="message-text" placeholder="В свободной форме" cols="44" rows="7" title="Ваше сообщение (обязательное поле)"></textarea>
                 <button class="button-close" type="button" aria-label="Закрыть форму"></button>

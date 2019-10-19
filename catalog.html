@@ -54,14 +54,14 @@
                 <div class="search">
                     <a class="search-link" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
-                            <path fill="#ffffff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"></path>
+                            <path fill="#ffffff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
                         </svg>
                         <span class="visually-hidden">Поиск товара</span>
                     </a>
                     <h2 class="visually-hidden">Поиск товара</h2>
                     <div class="search-form-container">
                         <form class="search-form" action="https://echo.gllacy.ru" method="get">
-                            <input type="search" placeholder="Крем-брюле" name="search" autocomplete="off" id="field-search" title="Набери, и мы приложим все усилия, чтобы это отыскать :)">
+                            <input class="placeholder" type="search" placeholder="Крем-брюле" name="search" autocomplete="off" id="field-search" title="Набери, и мы приложим все усилия, чтобы это отыскать :)">
                             <label class="visually-hidden" for="field-search">Поле для поиска</label>
                         </form>
                     </div>
@@ -70,8 +70,8 @@
                     <a class="user-account-link" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
                             <g fill="#ffffff">
-                                <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"></path>
-                                <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"></path>
+                                <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
+                                <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
                             </g>
                         </svg>
                         <span>Вход</span>
@@ -79,9 +79,9 @@
                     <h2 class="visually-hidden">Личный кабинет</h2>
                     <div class="user-form-container">
                         <form class="user-form" action="https://echo.gllacy.ru" method="post">
-                            <input class="user-login" type="text" id="login" name="login" autocomplete="off" placeholder="email@example.com" title="Введите Ваш логин (e-mail)">
+                            <input class="user-login placeholder" type="text" id="login" name="login" autocomplete="off" placeholder="email@example.com" title="Введите Ваш логин (e-mail)">
                             <label class="visually-hidden" for="login">Ваш логин</label>
-                            <input class="user-password" type="password" id="password" name="password" autocomplete="off" placeholder="••••••••" title="Введите Ваш пароль">
+                            <input class="user-password placeholder" type="password" id="password" name="password" autocomplete="off" placeholder="••••••••" title="Введите Ваш пароль">
                             <label class="visually-hidden" for="password">Ваш пароль</label>
                             <div class="user-form-click">
                                 <button class="button button-enter" type="submit" name="button-entrance">Войти</button>
@@ -97,7 +97,7 @@
                     <a class="basket-link" href="#">2 товара</a>
                     <h2 class="visually-hidden">Содержание корзины</h2>
                     <div class="basket-form-container">
-                        <form class="basket-form" action="https://echo.gllacy.ru" method="post">
+                        <form class="basket-form" action="https://echo.gllacy.ru" method="get">
                             <ul class="basket-list">
                                 <li class="basket-item">
                                     <a class="button-item-delete" href="#" title="Удаление товара из корзины">
@@ -119,7 +119,7 @@
                                 </li>
                             </ul>
                             <span class="basket-total">Итого: 750 руб.</span>
-                            <a class="button button-basket" href="#">Оформить заказ</a>
+                            <button class="button button-basket" type="submit" name="basket">Оформить заказ</button>
                         </form>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
         </ul>
         <section class="filters">
             <h2 class="visually-hidden">Сортировка товаров</h2>
-            <form class="filters-form" action="https://echo.gllacy.ru" method="post">
+            <form class="filters-form" action="https://echo.gllacy.ru" method="get">
                 <fieldset class="filter-category" title="Выберите категорию сортировки">
                     <legend>Сортировка:</legend>
                     <select name="filter-category-select" id="filter-category">
@@ -217,7 +217,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     <span class="goods-item-price">310</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -225,7 +225,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                     <span class="goods-item-price">380</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -233,7 +233,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                     <span class="goods-item-price">355</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -241,7 +241,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     <span class="goods-item-price">415</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -249,7 +249,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
                     <span class="goods-item-price">325</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -257,7 +257,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
                     <span class="goods-item-price">410</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -265,7 +265,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
                     <span class="goods-item-price">375</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -273,7 +273,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
                     <span class="goods-item-price">320</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -281,7 +281,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                     <span class="goods-item-price">440</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -289,7 +289,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
                     <span class="goods-item-price">435</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -297,7 +297,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
                     <span class="goods-item-price">355</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="goods-item">
                     <a class="goods-item-link" href="#">
@@ -305,7 +305,7 @@
                     </a>
                     <img class="goods-photo" src="img/ice-cream-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
                     <span class="goods-item-price">420</span>
-                    <button class="button button-quick-view" type="button">Быстрый просмотр</button>
+                    <a class="button button-quick-view" href="#">Быстрый просмотр</a>
                 </li>
             </ul>
             <ul class="pagination-list">
@@ -425,7 +425,6 @@
             </div>
         </section>
     </footer>
-
 
 </body>
 
