@@ -2,6 +2,7 @@
 
 * Студент: [Александр Трубицын](https://up.htmlacademy.ru/htmlcss/26/user/1086625).
 * Наставник: [Дмитрий Казанцев]
+* Сборка: https://alextrubitsyn.github.io/1086625-gllacy-26/
 
 ---
 
